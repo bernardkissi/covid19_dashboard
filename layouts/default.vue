@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-sans antialiased">
     <nav class=" text-gray-700 dark:text-white bg-gray-300 dark:bg-gray-900">
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between py-3">
@@ -244,7 +244,7 @@
         </div>
       </div>
     </nav>
-    <!-- <online /> -->
+    <online />
     <nuxt />
     <!-- <div class="flex items-center justify-center text-gray-700">
       <div class="flex flex-col pb-4">
@@ -267,7 +267,11 @@
   </div>
 </template>
 <script>
+import Online from '@/components/online'
 export default {
+  components: {
+    Online
+  },
   data: () => ({
     mode: 'light',
     open: false,
@@ -285,4 +289,17 @@ export default {
   }
 }
 </script>
-<style></style>
+<style scoped>
+.tooltip.info .tooltip-inner {
+  background: rgba(0, 68, 153, 0.9);
+  color: white;
+  font-size: 12px;
+  padding: 18px;
+  border-radius: 5px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+}
+.tooltip.info .tooltip-arrow {
+  border-color: rgba(0, 68, 153, 0.9);
+}
+</style>

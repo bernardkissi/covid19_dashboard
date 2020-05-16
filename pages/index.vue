@@ -26,9 +26,19 @@
         </div>
       </div>
       <div
-        class="col-span-1 lg:col-span-2 lg:border-none border-t border-gray-700 pt-4"
+        class="col-span-1 lg:col-span-2 lg:border-none border-t border-gray-700 pt-4 md:pt-0"
       >
-        fsdsfdfds
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="text-2xl font-semibold">
+              Regional Breakdown
+            </div>
+            <div class="mb-4 font-medium text-gray-500">
+              View regional distribution of cases and trends. Click on cards to
+              view map details
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
