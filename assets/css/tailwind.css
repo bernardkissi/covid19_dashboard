@@ -4,6 +4,8 @@
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';
 
+
 .dark-mode body {
     @apply bg-gray-800 text-white;
 }
+
