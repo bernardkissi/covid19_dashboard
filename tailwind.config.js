@@ -19,9 +19,12 @@ module.exports = {
     backgroundColor: [
       'dark',
       'dark-hover',
+      'dark-focus',
+      'dark-active',
       'dark-group-hover',
       'dark-even',
-      'dark-odd'
+      'dark-odd',
+      'dark-placeholder'
     ],
     borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
     textColor: ['dark', 'dark-hover', 'dark-active']
