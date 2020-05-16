@@ -155,15 +155,17 @@
             </div>
           </div>
           <div class="flex items-center justify-center">
-            <button @click="themeMode()">
-              <svg v-if="mode" width="20" height="20">
+            <button v-if="mode === 'light'" @click="themeMode('dark')">
+              <svg width="20" height="20">
                 <path
                   d="M18.354 13.354l.928.373a1 1 0 00-1.3-1.3l.372.927zM6.646 1.646l.928.373A1 1 0 006.273.718l.373.928zm11.335 10.78c-.92.37-1.925.574-2.981.574v2a9.976 9.976 0 003.727-.718l-.746-1.856zM15 13a8 8 0 01-8-8H5c0 5.523 4.477 10 10 10v-2zM7 5c0-1.056.204-2.061.574-2.981l-1.856-.746A9.975 9.975 0 005 5h2zm-5 5a8.003 8.003 0 015.019-7.426L6.273.718A10.003 10.003 0 000 10h2zm8 8a8 8 0 01-8-8H0c0 5.523 4.477 10 10 10v-2zm7.426-5.019A8.003 8.003 0 0110 18.001v2c4.207 0 7.805-2.599 9.282-6.274l-1.856-.746z"
                   fill-rule="nonzero"
                   fill="#4A5568"
                 />
               </svg>
-              <svg v-else width="20" height="20">
+            </button>
+            <button v-else @click="themeMode('light')">
+              <svg width="20" height="20">
                 <path
                   d="M10 1v1-1zm0 17v1-1zm9-8h-1 1zM2 10H1h1zm14.364 6.364l-.707-.707.707.707zM4.344 4.344l-.708-.708.707.707zm12.02-.708l-.707.707.707-.707zm-12.02 12.02l-.708.708.707-.707zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
                   stroke="#F6AD55"
@@ -263,19 +265,18 @@
 <script>
 export default {
   data: () => ({
-    mode: false,
+    mode: 'light',
     open: false,
     msg:
       'We use funds to keep ghCovid19.live runing by paying our cloud hosting services '
   }),
+  beforeMount() {
+    this.$colorMode.preference = 'light'
+  },
   methods: {
-    themeMode() {
-      this.mode = !this.mode
-      if (this.mode === true) {
-        this.$colorMode.preference = 'light'
-      } else {
-        this.$colorMode.preference = 'dark'
-      }
+    themeMode(mode) {
+      this.$colorMode.preference = mode
+      this.mode = mode
     }
   }
 }
