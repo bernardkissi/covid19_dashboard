@@ -63,8 +63,8 @@ export default {
       '@nuxtjs/laravel-echo',
       {
         broadcaster: 'pusher',
-        key: process.env.NUXT_PUSHER_APP_KEY,
-        cluster: process.env.NUXT_PUSHER_APP_CLUSTER,
+        key: 'dmB12C35',
+        cluster: 'mt1',
         encrypted: false,
         wsHost: '127.0.0.1',
         wsPort: 6001,
