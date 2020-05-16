@@ -25,7 +25,9 @@
           </div>
         </div>
       </div>
-      <div class="col-span-1 lg:col-span-2">
+      <div
+        class="col-span-1 lg:col-span-2 lg:border-none border-t border-gray-700 pt-4"
+      >
         fsdsfdfds
       </div>
     </div>
