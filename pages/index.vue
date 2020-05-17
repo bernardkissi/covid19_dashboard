@@ -1,13 +1,13 @@
 <template>
   <div
-    class="text-gray-700 dark:text-gray-200 max-w-7xl rounded-md mt-2 lg:py-10 py-6 px-4 sm:px-8 lg:px-8 mx-auto"
+    class="text-gray-700 dark:text-gray-200 max-w-7xl rounded-md mt-1 lg:py-10 py-6 px-4 sm:px-8 lg:px-8 mx-auto"
   >
     <div class="grid grid-cols-1 gap-0 lg:grid-cols-4 lg:gap-12">
       <div class="col-span-1 lg:col-span-2">
         <div class="relative">
           <input
             v-model="search"
-            class="p-4 px-16 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 rounded-md w-full shadow-xl 
+            class="outline-none p-4 px-16 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 rounded-md w-full shadow-xl 
             dark:placeholder-gray-300 placeholder-gray-700"
             type="text"
             placeholder="Search Regions, eg. Greater Accra, Ashanti, Northen"
@@ -27,7 +27,7 @@
 
         <div class="flex items-center justify-center mt-8">
           <button
-            class="px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md dark-hover:bg-gray-600 font-semibold   hover:bg-gray-400 transition duration-500 ease-in-out"
+            class="outline-none px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md dark-hover:bg-gray-600 font-semibold   hover:bg-gray-400 transition duration-500 ease-in-out"
             :class="{
               'dark:bg-gray-900 bg-orange-300 px-4 text-white py-2 shadow-lg': isGhana
             }"
@@ -36,7 +36,7 @@
             Total Cases
           </button>
           <button
-            class="ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600  hover:bg-gray-400 transition  duration-500 ease-in-out"
+            class="outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600  hover:bg-gray-400 transition  duration-500 ease-in-out"
             :class="{
               'dark:bg-gray-900 bg-orange-300 px-4 text-white py-2 shadow-lg': isToday
             }"
@@ -45,7 +45,7 @@
             <span class="">Cases</span> Today
           </button>
           <button
-            class="ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600 hover:bg-gray-400 transition  duration-500 ease-in-out"
+            class="outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600 hover:bg-gray-400 transition  duration-500 ease-in-out"
             :class="{
               'dark:bg-gray-900 bg-orange-300 px-4 text-white py-2 shadow-lg': isWorld
             }"
@@ -65,7 +65,7 @@
         <div
           class="mt-8 mb-3 text-xs text-gray-700 dark:text-gray-400 font-normal tracking-wide text-right"
         >
-          Data complied from state organizations
+          Data Sources:
           <nuxt-link
             class="px-1 border-b-4 border-blue-400 hover:bg-blue-100"
             to="/about"
@@ -144,6 +144,9 @@
             </div>
           </div>
         </div>
+        <!-- inser regional cards -->
+        <Regional />
+        <!-- end of regional cards -->
       </div>
     </div>
   </div>
@@ -153,12 +156,14 @@ import Overall from '@/components/overall'
 import Today from '@/components/today'
 import World from '@/components/world'
 import Table from '@/components/table'
+import Regional from '@/components/regional'
 
 export default {
   components: {
     Overall,
     Today,
     World,
+    Regional,
     Table
   },
   async fetch({ store, from }) {

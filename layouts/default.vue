@@ -5,7 +5,7 @@
         <div class="relative flex items-center justify-between py-3">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
-              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none dark-focus:outline-none dark-focus:bg-gray-900 focus:bg-gray-500 focus:text-white transition duration-150 ease-in-out"
             >
               <svg
                 v-if="open === false"
@@ -126,7 +126,7 @@
               </div>
               <span class="px-3">
                 <h1
-                  class="sm:justify-center sm:text-base md:block md:text-xl lg:text-2xl font-semibold"
+                  class="sm:justify-center sm:text-base md:block text-xl lg:text-2xl font-semibold"
                 >
                   Cases Tracker
                 </h1>
@@ -157,7 +157,7 @@
           <div class="flex items-center justify-center">
             <button
               v-if="mode === 'light'"
-              class="pr-6 md:pr-0"
+              class="dark-focus:outline-none focus:outline-none pr-6 md:pr-0"
               @click="themeMode('dark')"
             >
               <svg width="20" height="20">
@@ -168,7 +168,11 @@
                 />
               </svg>
             </button>
-            <button v-else class="pr-6 md:pr-0" @click="themeMode('light')">
+            <button
+              v-else
+              class="dark-focus:outline-none focus:outline-none pr-6 md:pr-0"
+              @click="themeMode('light')"
+            >
               <svg width="20" height="20">
                 <path
                   d="M10 1v1-1zm0 17v1-1zm9-8h-1 1zM2 10H1h1zm14.364 6.364l-.707-.707.707.707zM4.344 4.344l-.708-.708.707.707zm12.02-.708l-.707.707.707-.707zm-12.02 12.02l-.708.708.707-.707zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
@@ -214,7 +218,7 @@
                         hide: 100
                       }
                     }"
-                    class="ml-4 px-3 py-2 rounded-md text-xs uppercase font-bold leading-5 text-orange-200 focus:outline-none transition  duration-150 ease-in-out bg-orange-600"
+                    class="ml-4 px-3 py-2 rounded-md text-xs uppercase font-bold leading-5 text-orange-200 transition dark-focus:outline-none focus:outline-none duration-150 ease-in-out bg-orange-600"
                   >
                     Support Us
                   </button>

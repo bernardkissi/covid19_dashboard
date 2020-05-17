@@ -1,5 +1,5 @@
 <template>
-  <div class="text-sm">
+  <div class="text-sm shadow-lg">
     <div v-if="$nuxt.isOffline">
       <div
         class="flex items-center justify-center px-4 py-2 bg-gray-200 dark:bg-gray-700"
@@ -10,8 +10,11 @@
         >
           <path d="M13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" />
         </svg>
-        <span class="text-gray-300 font-medium">
+        <span class="hidden md:block text-gray-300 font-medium">
           You lost connection and might not get recent updates
+        </span>
+        <span class="md:hidden text-gray-300 font-medium">
+          You lost connection
         </span>
       </div>
     </div>

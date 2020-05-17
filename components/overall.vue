@@ -7,7 +7,7 @@
     </div>
     <div class="flex items-center justify-between md:mt-0 -mt-1">
       <div
-        class="w-1/4 mr-4 py-4 bg-red-300 shadow md:border-red-600 border-b-4 border-red-600 mt-4 rounded-md"
+        class="w-1/4 mr-2 md:mr-4 py-4 bg-red-300 shadow md:border-red-600 border-b-4 border-red-600 mt-4 rounded-md"
       >
         <div class="flex flex-col justify-between">
           <div
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div
-        class="w-1/4 mr-4 py-4 bg-blue-300 shadow border-b-4 border-blue-600 mt-4 rounded-md"
+        class="w-1/4 mr-2 md:mr-4 py-4 bg-blue-300 shadow border-b-4 border-blue-600 mt-4 rounded-md"
       >
         <div class="flex flex-col justify-between">
           <div
@@ -49,7 +49,7 @@
         </div>
       </div>
       <div
-        class="w-1/4 mr-4 py-4 bg-green-300 border-b-4 shadow border-green-600 mt-4 rounded-md"
+        class="w-1/4 mr-2 md:mr-4 py-4 bg-green-300 border-b-4 shadow border-green-600 mt-4 rounded-md"
       >
         <div class="flex flex-col justify-between">
           <div
