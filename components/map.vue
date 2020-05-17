@@ -8,7 +8,7 @@
     <keep-alive>
       <div id="map" ref="mapdiv"></div>
     </keep-alive>
-    <div class="mt-1">
+    <div class="mt-1 text-gray-700">
       <div class="flex items-center justify-start">
         <svg class="h-6 w-6 mt-2 mr-1" viewBox="0 0 24 24">
           <path

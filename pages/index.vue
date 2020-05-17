@@ -138,7 +138,7 @@
             <div class="text-2xl font-semibold">
               Regional Breakdown
             </div>
-            <div class="mb-4 font-normal text-gray-600 ">
+            <div class="mb-4 font-normal text-gray-700 ">
               View regional distribution of cases and trends. Click on cards to
               view map details
             </div>
