@@ -27,7 +27,7 @@
 
         <div class="flex items-center justify-center mt-8">
           <button
-            class="outline-none px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md dark-hover:bg-gray-600 font-semibold   hover:bg-gray-400 transition duration-500 ease-in-out"
+            class="dark-focus:outline-none focus:outline-none px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md dark-hover:bg-gray-600 font-semibold   hover:bg-gray-400 transition duration-500 ease-in-out"
             :class="{
               'dark:bg-gray-900 bg-orange-300 px-4 text-white py-2 shadow-lg': isGhana
             }"
@@ -36,7 +36,7 @@
             Total Cases
           </button>
           <button
-            class="outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600  hover:bg-gray-400 transition  duration-500 ease-in-out"
+            class="dark-focus:outline-none focus:outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600  hover:bg-gray-400 transition  duration-500 ease-in-out"
             :class="{
               'dark:bg-gray-900 bg-orange-300 px-4 text-white py-2 shadow-lg': isToday
             }"
@@ -45,7 +45,7 @@
             <span class="">Cases</span> Today
           </button>
           <button
-            class="outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600 hover:bg-gray-400 transition  duration-500 ease-in-out"
+            class="dark-focus:outline-none focus:outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600 hover:bg-gray-400 transition  duration-500 ease-in-out"
             :class="{
               'dark:bg-gray-900 bg-orange-300 px-4 text-white py-2 shadow-lg': isWorld
             }"
