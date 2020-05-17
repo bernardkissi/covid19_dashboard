@@ -2,7 +2,7 @@
   <div>
     <div class="flex items-center justify-between">
       <div
-        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 bg-gray-800 md:bg-red-200 border-b-2 border-red-600 rounded-md shadow-none cursor-pointer"
+        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 bg-gray-800 md:bg-gray-100 border-b-2 border-red-600 rounded-md shadow-none cursor-pointer"
         :class="{
           'md:shadow-lg': caseSelected === 'confirmed'
         }"
@@ -23,7 +23,9 @@
             </svg>
             cases
           </div>
-          <div class="text-base font-bold text-white text-center">
+          <div
+            class="text-base font-bold text-gray-700 dark:text-gray-100 text-center"
+          >
             {{ region.confirmed.toLocaleString() }}
           </div>
         </div>
