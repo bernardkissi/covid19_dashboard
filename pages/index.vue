@@ -147,6 +147,9 @@
         <!-- inser regional cards -->
         <Regional />
         <!-- end of regional cards -->
+        <!-- regional map -->
+        <Map />
+        <!-- end of regional map -->
       </div>
     </div>
   </div>
@@ -157,6 +160,7 @@ import Today from '@/components/today'
 import World from '@/components/world'
 import Table from '@/components/table'
 import Regional from '@/components/regional'
+import Map from '@/components/map'
 
 export default {
   components: {
@@ -164,7 +168,8 @@ export default {
     Today,
     World,
     Regional,
-    Table
+    Table,
+    Map
   },
   async fetch({ store, from }) {
     const intialPageLoad = !from

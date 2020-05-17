@@ -79,9 +79,9 @@
       >
         <div class="flex flex-col justify-between">
           <div
-            class="mb-1 flex items-center justify-center tracking-normal dark:text-gray-600 text-gray-400  uppercase text-xs font-bold text-center"
+            class="mb-1 flex items-center justify-center tracking-normal dark:text-gray-600 text-gray-500  uppercase text-xs font-bold text-center"
             :class="{
-              'dark:text-gray-600 text-gray-600': caseSelected === 'recovered'
+              'dark:text-gray-700 text-gray-700': caseSelected === 'deceased'
             }"
           >
             Deaths
