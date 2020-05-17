@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans antialiased">
+  <div class="font-sans antialiased text-sm">
     <nav class=" text-gray-700 dark:text-white bg-gray-300 dark:bg-gray-900">
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between py-3">
@@ -126,7 +126,7 @@
               </div>
               <span class="px-3">
                 <h1
-                  class="sm:justify-center sm:text-base md:block md:text-xl lg:text-xl font-semibold"
+                  class="sm:justify-center sm:text-base md:block md:text-xl lg:text-2xl font-semibold"
                 >
                   Cases Tracker
                 </h1>
