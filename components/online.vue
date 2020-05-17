@@ -27,21 +27,21 @@
         </svg>
         <span class="text-sm text-gray-700 dark:text-gray-300 font-medium">
           Last updated
-          <timeago datetime="2020-05-16 07:35:00" :auto-update="10"></timeago>
+          <timeago :datetime="getDate" :auto-update="10"></timeago>
         </span>
       </div>
     </div>
   </div>
 </template>
 <script>
-// import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
   computed: {
-    // ...mapGetters({ total: 'trends/getTotals' }),
-    // getDate() {
-    //   const key = Object.keys(this.total.spots)
-    //   return this.total.spots[key].date.date
-    // }
+    ...mapGetters({ total: 'trends/getTotals' }),
+    getDate() {
+      const key = Object.keys(this.total.spots)
+      return this.total.spots[key].date.date
+    }
   }
 }
 </script>

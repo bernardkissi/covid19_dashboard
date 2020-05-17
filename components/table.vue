@@ -43,7 +43,7 @@
             @click.prevent="setRegion(region.name)"
           >
             <td
-              class="w-3/5 px-5 py-4 leading-4 text-xs dark:text-gray-100 text-gray-700 font-bold border-b border-gray-400 dark:border-gray-600  bg-gray-200 dark:bg-gray-700 uppercase tracking-wider"
+              class="w-2/5 px-5 py-4 leading-4 text-xs dark:text-gray-100 text-gray-700 font-bold border-b border-gray-400 dark:border-gray-600  bg-gray-200 dark:bg-gray-700 uppercase tracking-wider"
             >
               <div class="flex items-center">
                 <span>

@@ -289,7 +289,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 .tooltip.info .tooltip-inner {
   background: rgba(0, 68, 153, 0.9);
   color: white;
