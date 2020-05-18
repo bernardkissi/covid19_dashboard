@@ -66,7 +66,7 @@
         />
       </div>
       <div
-        class="flex flex-col lg:flex-row items-center px-4 lg:px-10 dark:bg-gray-300 bg-gray-100 py-8 justify-between shadow-sm"
+        class="flex flex-col lg:flex-row items-center px-4 lg:px-10 dark:bg-gray-300 bg-blue-100 py-8 justify-between shadow-sm"
       >
         <img
           class="rounded-md  mb-2 md:mb-0"
@@ -106,7 +106,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col lg:flex-row items-center px-5 lg:px-8 dark:bg-white bg-blue-100 py-8 justify-between shadow-sm"
+        class="flex flex-col lg:flex-row items-center px-5 border-t border-gray-400 lg:px-8 dark:bg-white bg-blue-100 py-8 justify-between shadow-sm"
       >
         <div class="ml-3 lg:ml-12 text-gray-800">
           <h1 class="text-3xl text-gray-800 font-semibold">
@@ -201,7 +201,7 @@
         </div>
       </div>
       <div
-        class="text-center rounded-b-md dark:text-gray-300 text-gray-700 p-3 dark:bg-gray-800"
+        class="text-center rounded-b-md dark:text-gray-100 text-gray-900 p-3 dark:bg-gray-800"
       >
         Source WHO Africa,2020
       </div>
