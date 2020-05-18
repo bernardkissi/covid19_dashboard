@@ -141,7 +141,7 @@ export default {
       isSelected: 'regions/getRegion'
     }),
     searchResults() {
-      const keyword = this.searchKeyword
+      const keyword = this.searchKeyword.toLowerCase()
 
       if (keyword !== '') {
         return this.regions.filter(function(region) {
