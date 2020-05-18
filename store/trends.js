@@ -36,8 +36,8 @@ export const mutations = {
 export const actions = {
   async fetchTrends({ commit }) {
     const [daily, weekly] = await Promise.all([
-      this.$axios.get('https://2d983fe7.ngrok.io/api/getDailyUpdates'),
-      this.$axios.get('https://2d983fe7.ngrok.io/api/getWeeklyUpdates')
+      this.$axios.get('https://d85ed9c7.ngrok.io/api/getDailyUpdates'),
+      this.$axios.get('https://d85ed9c7.ngrok.io/api/getWeeklyUpdates')
     ])
     commit('putDaily', daily.data)
     commit('putWeekly', weekly.data)
