@@ -38,7 +38,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#F6AD55' },
   /*
    ** Global CSS
    */
@@ -62,13 +62,13 @@ export default {
     [
       '@nuxtjs/laravel-echo',
       {
-        // broadcaster: 'pusher',
-        // key: 'dmB12C35',
-        // cluster: 'mt1',
-        // encrypted: false,
-        // wsHost: '127.0.0.1',
-        // wsPort: 6001,
-        // disableStats: false
+        broadcaster: 'pusher',
+        key: 'dmB12C35',
+        cluster: 'mt1',
+        encrypted: false,
+        wsHost: '127.0.0.1',
+        wsPort: 6001,
+        disableStats: false
       }
     ]
   ],
