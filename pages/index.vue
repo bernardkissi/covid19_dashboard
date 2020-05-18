@@ -29,7 +29,7 @@
           <button
             class="dark-focus:outline-none focus:outline-none px-4 py-2 dark:bg-gray-700 bg-gray-300 dark:text-gray-100 rounded-md dark-hover:bg-gray-600 font-semibold hover:bg-gray-400 transition duration-500 ease-in-out"
             :class="{
-              'dark:bg-gray-500 dark:text-white bg-orange-400 text-white px-4  py-2 shadow-lg': isGhana
+              'dark:bg-gray-900 dark:text-white bg-orange-400 text-white px-4  py-2 shadow-lg': isGhana
             }"
             @click="dynamicComponent('Overall')"
           >
@@ -38,7 +38,7 @@
           <button
             class="dark-focus:outline-none focus:outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600  hover:bg-gray-400 transition  duration-500 ease-in-out"
             :class="{
-              'dark:bg-gray-500 dark:text-white bg-orange-400 text-white px-4  py-2 shadow-lg': isToday
+              'dark:bg-gray-900 dark:text-white bg-orange-400 text-white px-4  py-2 shadow-lg': isToday
             }"
             @click="dynamicComponent('Today')"
           >
@@ -47,7 +47,7 @@
           <button
             class="dark-focus:outline-none focus:outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600 hover:bg-gray-400 transition  duration-500 ease-in-out"
             :class="{
-              'dark:bg-gray-500 dark:text-white bg-orange-400 text-white py-2 shadow-lg': isWorld
+              'dark:bg-gray-900 dark:text-white bg-orange-400 text-white py-2 shadow-lg': isWorld
             }"
             @click="dynamicComponent('World')"
           >
