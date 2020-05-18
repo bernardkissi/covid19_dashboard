@@ -1,6 +1,7 @@
 export const state = () => ({
   daily: [],
-  weekly: []
+  weekly: [],
+  theme: 'light'
 })
 
 export const getters = {
@@ -12,6 +13,9 @@ export const getters = {
   },
   getTotals(state) {
     return state.daily.data
+  },
+  getTheme(state) {
+    return state.theme
   }
 }
 
@@ -22,14 +26,18 @@ export const mutations = {
 
   putWeekly(state, payload) {
     state.weekly = payload
+  },
+
+  putTheme(state, payload) {
+    state.theme = payload
   }
 }
 
 export const actions = {
   async fetchTrends({ commit }) {
     const [daily, weekly] = await Promise.all([
-      this.$axios.get('https://9c14d409.ngrok.io/api/getDailyUpdates'),
-      this.$axios.get('https://9c14d409.ngrok.io/api/getWeeklyUpdates')
+      this.$axios.get('https://bf989317.ngrok.io/api/getDailyUpdates'),
+      this.$axios.get('https://bf989317.ngrok.io/api/getWeeklyUpdates')
     ])
     commit('putDaily', daily.data)
     commit('putWeekly', weekly.data)
@@ -41,5 +49,9 @@ export const actions = {
 
   updateWeekly({ commit }, payload) {
     commit('putWeekly', payload)
+  },
+
+  fetchTheme({ commit }, payload) {
+    commit('putTheme', payload)
   }
 }

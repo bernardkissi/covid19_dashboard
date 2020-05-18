@@ -156,7 +156,7 @@
           </div>
           <div class="flex items-center justify-center">
             <button
-              v-if="mode === 'light'"
+              v-if="themeColor === 'light'"
               class="dark-focus:outline-none focus:outline-none pr-6 md:pr-0"
               @click="themeMode('dark')"
             >
@@ -193,7 +193,7 @@
                   >Dashboard</nuxt-link
                 >
                 <nuxt-link
-                  to="/prevention"
+                  to="/coronavirus"
                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 focus:outline-none  transition hover:text-red-600 focus:text-red-600 focus:font-semibold duration-150 ease-in-out"
                   >Wiki</nuxt-link
                 >
@@ -250,11 +250,11 @@
     </nav>
     <online />
     <nuxt />
-    <!-- <div class="flex items-center justify-center text-gray-700">
+    <div class="flex items-center justify-center text-gray-700">
       <div class="flex flex-col pb-4">
         <a href="https://twitter.com/OwireduBernard" target="_blank">
           <button
-            class="flex items-center text-xs uppercase font-bold px-4 py-2 rounded-md text-blue-500 bg-gray-900"
+            class="flex items-center text-xs uppercase font-bold px-4 py-2 rounded-md text-blue-500 bg-gray-300 dark:bg-gray-900"
           >
             <svg width="18" height="15">
               <path
@@ -267,28 +267,32 @@
           </button>
         </a>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import Online from '@/components/online'
 export default {
   components: {
     Online
   },
   data: () => ({
-    mode: 'light',
     open: false,
     msg:
       'We use funds to keep ghCovid19.live runing by paying our cloud hosting services '
   }),
+  computed: {
+    ...mapGetters({ themeColor: 'trends/getTheme' })
+  },
   beforeMount() {
-    this.$colorMode.preference = 'light'
+    this.$colorMode.preference = this.themeColor
   },
   methods: {
+    ...mapActions({ theme: 'trends/fetchTheme' }),
     themeMode(mode) {
       this.$colorMode.preference = mode
-      this.mode = mode
+      this.theme(mode)
     }
   }
 }

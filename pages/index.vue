@@ -95,7 +95,7 @@
             </h1>
             <p class="dark:text-gray-500 text-gray-600 text-sm leading-5">
               If you want access to our data API or raw sheet data, kindly send
-              email to bernardkissi18@gmail.com stating the purpose of use.
+              an email to bernardkissi18@gmail.com stating the purpose of use.
             </p>
           </div>
           <div class="mt-4">
@@ -108,14 +108,14 @@
           <div class="mt-4">
             <h1 class="text-base font-semibold">Are you offical?</h1>
             <p class="dark:text-gray-500 text-gray-600 text-sm leading-5">
-              No we are not offical, but will seek to help in the fight of the
+              No we are not offical, but we seek to help in the fight against
               virus.
             </p>
           </div>
           <div class="mt-4">
             <h1 class="text-base font-semibold">Do you want to support?</h1>
             <p class="dark:text-gray-500 text-gray-600 text-sm leading-5">
-              Support volunteers to keep on the fight with coronavirus
+              Support volunteers to keep on the fight against coronavirus
             </p>
             <a
               href="https://dashboard.flutterwave.com/donate/ode7kguxvkkg"
@@ -138,7 +138,7 @@
             <div class="text-2xl font-semibold">
               Regional Breakdown
             </div>
-            <div class="mb-4 font-normal text-gray-700 ">
+            <div class="mb-4 font-medium text-gray-600 dark:text-gray-400">
               View regional distribution of cases and trends. Click on cards to
               view map details
             </div>
@@ -150,6 +150,99 @@
         <!-- regional map -->
         <Map />
         <!-- end of regional map -->
+        <!-- Spread trends weekly -->
+        <div class="mt-8">
+          <div class="text-2xl font-semibold">
+            Spread Trends
+          </div>
+          <div class="mb-2 font-medium dark:text-gray-500 text-gray-600">
+            View weekly updates of coronavirus across Ghana.
+          </div>
+          <div class="flex items-center py-2">
+            <button
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 px-1 md:px-3 py-2 font-medium rounded-md tracking-wide"
+              :class="{
+                'dark:bg-red-500 dark:text-white bg-red-500 text-white px-3 md:px-4 py-2 shadow-lg':
+                  activeTrend === 'Confirmed'
+              }"
+              @click="dynamicTrend('Confirmed')"
+            >
+              Confirmed
+            </button>
+            <button
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md"
+              :class="{
+                'dark:bg-blue-500 dark:text-white bg-blue-500 text-white px-3 py-2 shadow-lg':
+                  activeTrend === 'Active'
+              }"
+              @click="dynamicTrend('Active')"
+            >
+              Active
+            </button>
+            <button
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-3 py-2 font-medium tracking-wide rounded-md"
+              :class="{
+                'dark:bg-green-500 dark:text-white bg-green-500 text-white px-3 md:px-4 py-2 shadow-lg':
+                  activeTrend === 'Recovered'
+              }"
+              @click="dynamicTrend('Recovered')"
+            >
+              Recovered
+            </button>
+            <button
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md"
+              :class="{
+                'dark:bg-gray-900 dark:text-white bg-gray-500 text-white px-3 md:px-4 py-2 shadow-lg':
+                  activeTrend === 'Deaths'
+              }"
+              @click="dynamicTrend('Deaths')"
+            >
+              Deaths
+            </button>
+          </div>
+          <!-- insert cards -->
+          <!-- maincards -->
+          <component :is="activeTrend"></component>
+          <!-- end of cards -->
+        </div>
+        <!-- end of spread trends -->
+        <!-- demographics -->
+        <div class="mt-8">
+          <div class="text-2xl font-semibold">
+            General Information
+          </div>
+          <div class="mb-2 font-medium dark:text-gray-500 text-gray-600">
+            View weekly trends of coronavirus across Ghana.
+          </div>
+          <div class="flex items-center py-2">
+            <button
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md"
+              :class="{
+                'dark:bg-purple-500 dark:text-white bg-purple-500 text-white px-4 py-2 shadow-lg':
+                  activeDemo === 'Tested'
+              }"
+              @click="dynamicDemo('Tested')"
+            >
+              Test Performed
+            </button>
+            <button
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md"
+              :class="{
+                'dark:bg-orange-500 dark:text-white bg-orange-500 text-white px-4 py-2 shadow-lg':
+                  activeDemo === 'Critical'
+              }"
+              @click="dynamicDemo('Critical')"
+            >
+              Critical Cases
+            </button>
+          </div>
+          <!-- start -->
+          <!-- maincards -->
+          <component :is="activeDemo"></component>
+          <!-- end of cards -->
+          <!-- end of  -->
+        </div>
+        <!-- end -->
       </div>
     </div>
   </div>
@@ -169,7 +262,13 @@ export default {
     World,
     Regional,
     Table,
-    Map
+    Map,
+    Active: () => import('@/components/graphs/active'),
+    Deaths: () => import('@/components/graphs/deaths'),
+    Tested: () => import('@/components/graphs/tested'),
+    Confirmed: () => import('@/components/graphs/confirmed'),
+    Recovered: () => import('@/components/graphs/recovered'),
+    Critical: () => import('@/components/graphs/critical')
   },
   async fetch({ store, from }) {
     const intialPageLoad = !from
@@ -183,7 +282,9 @@ export default {
   },
   data: () => ({
     search: '',
-    activeComponent: 'Overall'
+    activeComponent: 'Overall',
+    activeTrend: 'Confirmed',
+    activeDemo: 'Tested'
   }),
   computed: {
     isGhana() {
@@ -208,6 +309,12 @@ export default {
   methods: {
     dynamicComponent(component) {
       this.activeComponent = component
+    },
+    dynamicTrend(component) {
+      this.activeTrend = component
+    },
+    dynamicDemo(component) {
+      this.activeDemo = component
     }
   }
 }

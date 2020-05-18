@@ -1,10 +1,17 @@
 <template>
   <div>
-    <VueApexCharts :type="chartType" :options="chartOptions" :series="series" />
+    <keep-alive>
+      <VueApexCharts
+        :type="chartType"
+        :options="chartOptions"
+        :series="series"
+      />
+    </keep-alive>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'Trends',
   props: {
@@ -42,9 +49,8 @@ export default {
     return {
       chartOptions: {
         chart: {
-          height: '40%',
           width: '100%',
-          foreColor: '#E2E8F0',
+          foreColor: '#4A5568',
           animations: {
             enabled: false,
             initialAnimation: {
@@ -67,7 +73,7 @@ export default {
         },
         grid: {
           show: true,
-          borderColor: '#4A5568'
+          borderColor: '#CBD5E0'
         },
         dataLabels: {
           enabled: false
@@ -94,6 +100,10 @@ export default {
           curve: 'smooth',
           colors: [this.color]
         },
+        noData: {
+          text: undefined,
+          align: 'center'
+        },
         yaxis: {
           show: true,
           showAlways: true,
@@ -102,6 +112,7 @@ export default {
             rotate: 90,
             style: {
               fontSize: '13px',
+              color: this.ycolor,
               fontFamily:
                 '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
               fontWeight: 600
@@ -117,10 +128,19 @@ export default {
       ]
     }
   },
+  computed: {
+    ...mapGetters({ theme: 'trends/getTheme' })
+  },
   watch: {
     seriesData(value) {
       this.updateChart(value)
+    },
+    theme(value) {
+      this.updateForeColor(value)
     }
+  },
+  mounted() {
+    this.updateForeColor(this.theme)
   },
   methods: {
     updateChart(value) {
@@ -129,6 +149,26 @@ export default {
           data: value
         }
       ]
+    },
+    updateForeColor(value) {
+      let color = ''
+      let border = ''
+      if (value !== 'light') {
+        color = '#E2E8F0'
+        border = '#4A5568'
+      } else {
+        color = '#4A5568'
+        border = '#E2E8F0'
+      }
+      this.chartOptions = {
+        ...this.chartOptions,
+        chart: {
+          foreColor: color
+        },
+        grid: {
+          borderColor: border
+        }
+      }
     }
   }
 }
