@@ -5,7 +5,7 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-  purge: ['./src/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
+  // purge: ['./src/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
   theme: {
     darkSelector: '.dark-mode',
     container: {
