@@ -27,27 +27,27 @@
 
         <div class="flex items-center justify-center mt-8">
           <button
-            class="dark-focus:outline-none focus:outline-none px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md dark-hover:bg-gray-600 font-semibold hover:bg-gray-400 transition duration-500 ease-in-out"
+            class="dark-focus:outline-none focus:outline-none px-4 py-2 dark:bg-gray-700 bg-gray-300 dark:text-gray-100 rounded-md dark-hover:bg-gray-600 font-semibold hover:bg-gray-400 transition duration-500 ease-in-out"
             :class="{
-              'dark-focus:bg-gray-900 focus:bg-orange-300 dark-active:bg-gray-900 active:bg-orange-300 dark-active:bg-gray-900 active:bg-orange-300 px-4 text-white py-2 shadow-lg': isGhana
+              'dark:bg-gray-500 dark:text-white bg-orange-400 text-white px-4  py-2 shadow-lg': isGhana
             }"
             @click="dynamicComponent('Overall')"
           >
             Total Cases
           </button>
           <button
-            class="dark-focus:outline-none focus:outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600  hover:bg-gray-400 transition  duration-500 ease-in-out"
+            class="dark-focus:outline-none focus:outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600  hover:bg-gray-400 transition  duration-500 ease-in-out"
             :class="{
-              'dark-focus:bg-gray-900 focus:bg-orange-300 px-4 text-white py-2 shadow-lg': isToday
+              'dark:bg-gray-500 dark:text-white bg-orange-400 text-white px-4  py-2 shadow-lg': isToday
             }"
             @click="dynamicComponent('Today')"
           >
             <span class="">Cases</span> Today
           </button>
           <button
-            class="dark-focus:outline-none focus:outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 text-gray-700 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600 hover:bg-gray-400 transition  duration-500 ease-in-out"
+            class="dark-focus:outline-none focus:outline-none ml-2 px-4 py-2 dark:bg-gray-700 bg-gray-300 dark:text-gray-100 rounded-md font-semibold dark-hover:bg-gray-600 hover:bg-gray-400 transition  duration-500 ease-in-out"
             :class="{
-              'dark-focus:bg-gray-900 focus:bg-orange-300 dark-active:bg-gray-900 active:bg-orange-300 px-4 text-white py-2 shadow-lg': isWorld
+              'dark:bg-gray-500 dark:text-white bg-orange-400 text-white py-2 shadow-lg': isWorld
             }"
             @click="dynamicComponent('World')"
           >
@@ -160,7 +160,7 @@
           </div>
           <div class="flex items-center py-2">
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 px-1 md:px-3 py-2 font-medium rounded-md tracking-wide"
+              class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 px-1 md:px-3 py-2 font-medium rounded-md tracking-wide"
               :class="{
                 'dark:bg-red-500 dark:text-white bg-red-500 text-white px-3 md:px-4 py-2 shadow-lg':
                   activeTrend === 'Confirmed'
@@ -170,7 +170,7 @@
               Confirmed
             </button>
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
+              class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-blue-500 dark:text-white bg-blue-500 text-white px-3 py-2 shadow-lg':
@@ -181,7 +181,7 @@
               Active
             </button>
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-3 py-2 font-medium tracking-wide rounded-md
+              class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-green-500 dark:text-white bg-green-500 text-white px-3 md:px-4 py-2 shadow-lg':
@@ -192,7 +192,7 @@
               Recovered
             </button>
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
+              class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-gray-900 dark:text-white bg-gray-500 text-white px-3 md:px-4 py-2 shadow-lg':
@@ -221,7 +221,7 @@
           </div>
           <div class="flex items-center py-2">
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
+              class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-purple-500 dark:text-white bg-purple-500 text-white px-4 py-2 shadow-lg':
@@ -232,7 +232,7 @@
               Test Performed
             </button>
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
+              class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-orange-500 dark:text-white bg-orange-500 text-white px-4 py-2 shadow-lg':
