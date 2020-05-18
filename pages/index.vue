@@ -170,7 +170,8 @@
               Confirmed
             </button>
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md"
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
+              transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-blue-500 dark:text-white bg-blue-500 text-white px-3 py-2 shadow-lg':
                   activeTrend === 'Active'
@@ -180,7 +181,8 @@
               Active
             </button>
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-3 py-2 font-medium tracking-wide rounded-md"
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-3 py-2 font-medium tracking-wide rounded-md
+              transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-green-500 dark:text-white bg-green-500 text-white px-3 md:px-4 py-2 shadow-lg':
                   activeTrend === 'Recovered'
@@ -190,7 +192,8 @@
               Recovered
             </button>
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md"
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
+              transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-gray-900 dark:text-white bg-gray-500 text-white px-3 md:px-4 py-2 shadow-lg':
                   activeTrend === 'Deaths'
@@ -202,7 +205,9 @@
           </div>
           <!-- insert cards -->
           <!-- maincards -->
-          <component :is="activeTrend"></component>
+          <transition name="component-fade" mode="out-in">
+            <component :is="activeTrend"></component>
+          </transition>
           <!-- end of cards -->
         </div>
         <!-- end of spread trends -->
@@ -216,7 +221,8 @@
           </div>
           <div class="flex items-center py-2">
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md"
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
+              transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-purple-500 dark:text-white bg-purple-500 text-white px-4 py-2 shadow-lg':
                   activeDemo === 'Tested'
@@ -226,7 +232,8 @@
               Test Performed
             </button>
             <button
-              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md"
+              class="dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
+              transition  duration-500 ease-in-out"
               :class="{
                 'dark:bg-orange-500 dark:text-white bg-orange-500 text-white px-4 py-2 shadow-lg':
                   activeDemo === 'Critical'
@@ -238,7 +245,9 @@
           </div>
           <!-- start -->
           <!-- maincards -->
-          <component :is="activeDemo"></component>
+          <transition name="component-fade" mode="out-in">
+            <component :is="activeDemo"></component>
+          </transition>
           <!-- end of cards -->
           <!-- end of  -->
         </div>
@@ -284,7 +293,7 @@ export default {
     search: '',
     activeComponent: 'Overall',
     activeTrend: 'Confirmed',
-    activeDemo: 'Tested'
+    activeDemo: 'Critical'
   }),
   computed: {
     isGhana() {
