@@ -61,7 +61,7 @@ export const mutations = {
 export const actions = {
   async fetchRegions({ commit }) {
     const regions = await this.$axios.get(
-      'https://bf989317.ngrok.io/api/getRegionalData'
+      'https://2d983fe7.ngrok.io/api/getRegionalData'
     )
     commit('addRegion', regions.data)
     commit('putRegion', 'Greater Accra')
