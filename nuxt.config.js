@@ -50,7 +50,8 @@ export default {
     { src: '~/plugins/map.js', ssr: false },
     { src: '~/plugins/trends.js', ssr: false },
     { src: '~/plugins/time.js', ssr: false },
-    { src: '~/plugins/tooltip.js', ssr: false }
+    { src: '~/plugins/tooltip.js', ssr: false },
+    { src: '~/plugins/localstorage.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules

@@ -2,7 +2,6 @@ export const state = () => ({
   regions: [],
   region: {},
   mapRegion: '',
-  totals: [],
   caseType: 'confirmed'
 })
 
@@ -12,9 +11,6 @@ export const getters = {
   },
   getRegion(state) {
     return state.region
-  },
-  getTotals(state) {
-    return state.totals
   },
   getMapRegion(state) {
     return state.mapRegion
@@ -27,10 +23,6 @@ export const getters = {
 export const mutations = {
   addRegion(state, payload) {
     state.regions = [...payload]
-  },
-
-  putTotals(state, payload) {
-    state.totals = payload
   },
 
   putRegion(state, payload) {
@@ -61,7 +53,7 @@ export const mutations = {
 export const actions = {
   async fetchRegions({ commit }) {
     const regions = await this.$axios.get(
-      'https://66318541.ngrok.io/api/getRegionalData'
+      'https://e0fe3046.ngrok.io/api/getRegionalData'
     )
     commit('addRegion', regions.data)
     commit('putRegion', 'Greater Accra')

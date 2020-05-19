@@ -39,10 +39,6 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  // props: {
-  //   time: String
-  //   required: true
-  // }
   computed: {
     ...mapGetters({ total: 'trends/getTotals' }),
     getDate() {

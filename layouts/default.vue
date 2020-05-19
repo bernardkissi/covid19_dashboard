@@ -248,7 +248,10 @@
         </div>
       </div>
     </nav>
-    <online />
+    {{ time }}
+    <!-- <client>
+      <online /> {{}}
+    </client> -->
     <nuxt />
     <div class="flex items-center justify-center text-gray-700">
       <div class="flex flex-col pb-4">
@@ -272,20 +275,25 @@
 </template>
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import Online from '@/components/online'
+// import Online from '@/components/online'
 export default {
   components: {
-    Online
+    // Online
   },
   data: () => ({
+    time: null,
     open: false,
     msg:
       'We use funds to keep ghCovid19.live runing by paying our cloud hosting services '
   }),
   computed: {
-    ...mapGetters({ themeColor: 'trends/getTheme' })
+    ...mapGetters({ themeColor: 'trends/getTheme', total: 'trends/getTotals' })
+    // getDate() {
+    //   const key = Object.keys(this.total.spots)
+    //   return this.total.spots[key].date.date
+    // }
   },
-  beforeMount() {
+  mounted() {
     this.$colorMode.preference = this.themeColor
   },
   methods: {

@@ -265,6 +265,7 @@ import Regional from '@/components/regional'
 import Map from '@/components/map'
 
 export default {
+  transition: 'component-fade',
   components: {
     Overall,
     Today,
@@ -330,38 +331,12 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: opacity 0.2s ease;
 }
-
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.component-fade-enter,
+.component-fade-leave-to {
+  opacity: 0;
 }
 </style>
