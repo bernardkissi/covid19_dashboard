@@ -248,10 +248,6 @@
         </div>
       </div>
     </nav>
-    {{ time }}
-    <!-- <client>
-      <online /> {{}}
-    </client> -->
     <nuxt />
     <div class="flex items-center justify-center text-gray-700">
       <div class="flex flex-col pb-4">
