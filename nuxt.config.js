@@ -51,7 +51,7 @@ export default {
     { src: '~/plugins/trends.js', ssr: false },
     { src: '~/plugins/time.js', ssr: false },
     { src: '~/plugins/tooltip.js', ssr: false },
-    { src: '~/plugins/localstorage.js', mode: 'client' }
+    { src: '~/plugins/localstorage.js', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules

@@ -3,9 +3,9 @@ import createPersistedState from 'vuex-persistedstate'
 
 const NAME_SPACE = 'vuex'
 
-export default ({ store, isHMR, from }) => {
+export default ({ store, isHMR, isClient }) => {
   if (isHMR) return
-  if (process.client) {
+  if (isClient) {
     createPersistedState({
       key: NAME_SPACE,
       paths: ['regions', 'trends', 'summaries']
