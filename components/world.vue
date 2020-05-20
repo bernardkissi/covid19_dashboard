@@ -23,10 +23,10 @@
           <div
             class="text-base md:text-xl mt-1 md:mt-0 font-bold text-red-700  text-center"
           >
-            <span class="hidden md:block">{{
+            <span class="hidden lg:block">{{
               summaries.cases.toLocaleString()
             }}</span>
-            <span class="block md:hidden">{{
+            <span class="block lg:hidden">{{
               summaries.cases | formatValue
             }}</span>
           </div>
@@ -49,8 +49,8 @@
           <div
             class="text-base md:text-xl mt-1 md:mt-0 font-bold text-blue-700 text-center"
           >
-            <span class="hidden md:block">{{ Active.toLocaleString() }}</span>
-            <span class="block md:hidden">{{ Active | formatValue }}</span>
+            <span class="hidden lg:block">{{ Active.toLocaleString() }}</span>
+            <span class="block lg:hidden">{{ Active | formatValue }}</span>
           </div>
         </div>
       </div>
@@ -71,10 +71,10 @@
           <div
             class="text-base md:text-xl mt-1 md:mt-0 font-bold text-green-700 text-center"
           >
-            <span class="hidden md:block">{{
+            <span class="hidden lg:block">{{
               summaries.recovered.toLocaleString()
             }}</span>
-            <span class="block md:hidden">{{
+            <span class="block lg:hidden">{{
               summaries.recovered | formatValue
             }}</span>
           </div>
@@ -97,10 +97,10 @@
           <div
             class="text-base md:text-xl mt-1 md:mt-0 font-bold text-gray-700 text-center"
           >
-            <span class="hidden md:block">{{
+            <span class="hidden lg:block">{{
               summaries.deaths.toLocaleString()
             }}</span>
-            <span class="block md:hidden">{{
+            <span class="block lg:hidden">{{
               summaries.deaths | formatValue
             }}</span>
           </div>

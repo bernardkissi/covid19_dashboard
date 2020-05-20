@@ -56,26 +56,24 @@
             </ul>
           </div>
         </div>
-        <img
-          class="rounded-md mt-1 lg:mt-0"
-          width="1200"
-          height="1200"
+        <!--  <img
+          class="rounded-md mt-1 lg:mt-0 h-32 w-32"
           src="~/assets/images/corona2.png"
           loading="lazy"
           alt="coronavirus"
-        />
+        /> -->
       </div>
       <div
-        class="flex flex-col lg:flex-row items-center px-4 lg:px-10 dark:bg-gray-300 bg-blue-100 py-8 justify-between shadow-sm"
+        class="flex flex-col lg:flex-row items-center px-4 lg:px-4 dark:bg-gray-300 bg-blue-100 py-8 justify-between shadow-sm"
       >
-        <img
+        <!-- <img
           class="rounded-md  mb-2 md:mb-0"
           width="800"
           height="800"
           src="~/assets/images/corona3.png"
           loading="lazy"
           alt="coronavirus"
-        />
+        /> -->
         <div class="ml-3 lg:ml-12 text-gray-800">
           <h1
             class=" text-2xl md:text-3xl font-semibold leading-tight md:leading-normal"
@@ -168,26 +166,26 @@
             </p>
           </div>
         </div>
-        <img
+        <!--  <img
           class="rounded-md ml-0 lg:ml-10"
           width="1300"
           height="1300"
           src="~/assets/images/corona4.png"
           loading="lazy"
           alt="coronavirus"
-        />
+        /> -->
       </div>
       <div
         class="flex flex-col lg:flex-row items-center px-4 lg:px-10 dark:bg-gray-900 bg-blue-900 border-b border-gray-700 py-8 justify-between shadow-sm"
       >
-        <img
+        <!-- <img
           class="rounded-md ml-0 lg:ml-10"
           width="1300"
           height="1300"
           src="~/assets/images/corona5.png"
           loading="lazy"
           alt="coronavirus"
-        />
+        /> -->
         <div class="ml-0 md:ml-4 lg:ml-12 dark:text-gray-500 text-gray-200">
           <h1 class="mt-2 lg:mt-0 text-3xl text-gray-100 font-semibold">
             Treatment Myths

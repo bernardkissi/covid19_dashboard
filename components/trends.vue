@@ -80,7 +80,7 @@ export default {
         },
         xaxis: {
           type: 'datetime',
-          tickAmount: 6,
+          tickAmount: 4,
           tickPlacement: 'on',
           min: new Date('2020-05-03').getTime()
         },

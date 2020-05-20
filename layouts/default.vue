@@ -5,7 +5,7 @@
         <div class="relative flex items-center justify-between py-3">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
-              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none dark-focus:outline-none dark-focus:bg-gray-900 focus:bg-gray-500 focus:text-white transition duration-150 ease-in-out"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-400 focus:outline-none dark-focus:outline-none dark-focus:bg-gray-900 focus:bg-gray-100 focus:text-white transition duration-150 ease-in-out"
             >
               <svg
                 v-if="open === false"
@@ -233,17 +233,17 @@
         <div class="px-2 pt-2 pb-3">
           <nuxt-link
             to="/"
-            class="block px-3 py-2 rounded-md text-base font-medium bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+            class="block px-3 py-2 rounded-md text-base font-medium dark:bg-gray-900 bg-gray-500 focus:outline-none focus:text-white focus:bg-gray-600 transition duration-150 ease-in-out"
             >Dashboard</nuxt-link
           >
           <nuxt-link
-            to="/prevention"
-            class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+            to="/coronavirus"
+            class="mt-1 block px-3 py-2 rounded-md text-base font-medium dark:text-gray-300 text-gray-700 dark-hover:bg-gray-700 hover:bg-gray-500 focus:outline-none focus:text-white focus:bg-gray-600 transition duration-150 ease-in-out"
             >About Virus</nuxt-link
           >
           <nuxt-link
             to="/about"
-            class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+            class="mt-1 block px-3 py-2 rounded-md text-base font-medium dark:text-gray-300 text-gray-700 dark-hover:bg-gray-700 hover:bg-gray-500 focus:outline-none focus:text-white focus:bg-gray-600 transition duration-150 ease-in-out"
             >About Us</nuxt-link
           >
         </div>
@@ -251,7 +251,7 @@
     </nav>
     <online />
     <nuxt />
-    <!--  <div class="flex items-center justify-center text-gray-700">
+    <div class="flex items-center justify-center text-gray-700">
       <div class="flex flex-col pb-4">
         <a href="https://twitter.com/OwireduBernard" target="_blank">
           <button
@@ -268,7 +268,7 @@
           </button>
         </a>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 <script>
