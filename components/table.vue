@@ -22,7 +22,7 @@
             <th
               class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-700 uppercase tracking-wider border-r border-gray-100"
             >
-              Recovered
+              Recover
             </th>
             <th
               class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-700 uppercase tracking-wider border-r border-gray-100"
@@ -158,6 +158,12 @@ export default {
     selected(value) {
       this.changeRegion(value)
     }
+  },
+  mounted() {
+    this.$echo.channel('regional').listen('.corona.regional', (e) => {
+      this.update(e)
+      this.changeRegion(this.isSelected.name)
+    })
   },
   methods: {
     setRegion(name) {

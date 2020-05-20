@@ -40,10 +40,9 @@
 import { mapGetters } from 'vuex'
 export default {
   computed: {
-    ...mapGetters({ total: 'trends/getTotals' }),
+    ...mapGetters({ summary: 'summaries/getWorld' }),
     getDate() {
-      const key = Object.keys(this.total.spots)
-      return this.total.spots[key].date.date
+      return this.summary.updated
     }
   }
 }

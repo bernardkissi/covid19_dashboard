@@ -1,8 +1,8 @@
-const env = require('dotenv').config()
+require('dotenv').config()
+
 export default {
   mode: 'universal',
 
-  env: env.parsed,
   /*
    ** Headers of the page
    */
@@ -60,16 +60,17 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
+    '@nuxtjs/pwa',
     [
       '@nuxtjs/laravel-echo',
       {
-        // broadcaster: 'pusher',
-        // key: 'dmB12C35',
-        // cluster: 'mt1',
-        // encrypted: false,
-        // wsHost: '127.0.0.1',
-        // wsPort: 6001,
-        // disableStats: false
+        broadcaster: 'pusher',
+        key: 'dmB12C35',
+        cluster: 'mt1',
+        encrypted: false,
+        wsHost: '127.0.0.1',
+        wsPort: 6001,
+        disableStats: false
       }
     ]
   ],
@@ -101,7 +102,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: process.env.API_URL || 'http://covid19.test/api'
+  },
   /*
    ** Build configuration
    */

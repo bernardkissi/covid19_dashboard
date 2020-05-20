@@ -166,7 +166,7 @@ export default {
     _this.map.seriesContainer.draggable = false
     _this.map.seriesContainer.resizable = false
     _this.map.maxZoomLevel = 1
-    _this.map.hiddenState.properties.opacity = 0
+    // _this.map.hiddenState.properties.opacity = 0
     // Create map polygon series
     _this.polygonSeries = _this.map.series.push(new am4maps.MapPolygonSeries())
     _this.polygonSeries.tooltip.getFillFromObject = false

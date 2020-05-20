@@ -16,16 +16,11 @@ export const mutations = {
 
 export const actions = {
   async fetchWorld({ commit }) {
-    const response = await this.$axios.get(
-      'https://e0fe3046.ngrok.io/api/world'
-    )
-    commit('putWorld', {
-      time: response.data.updated,
-      data: response.data.summary
-    })
+    const response = await this.$axios.get('http://covid19.test/api/world')
+    commit('putWorld', response.data)
   },
 
   updateWorld({ commit }, payload) {
-    commit('putWorld', { time: payload.updated, data: payload.summary })
+    commit('putWorld', payload.data)
   }
 }

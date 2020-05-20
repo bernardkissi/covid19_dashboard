@@ -24,10 +24,10 @@
             class="text-base md:text-xl mt-1 md:mt-0 font-bold text-red-700  text-center"
           >
             <span class="hidden md:block">{{
-              summaries.data.total_cases.toLocaleString()
+              summaries.cases.toLocaleString()
             }}</span>
             <span class="block md:hidden">{{
-              summaries.data.total_cases | formatValue
+              summaries.cases | formatValue
             }}</span>
           </div>
         </div>
@@ -72,10 +72,10 @@
             class="text-base md:text-xl mt-1 md:mt-0 font-bold text-green-700 text-center"
           >
             <span class="hidden md:block">{{
-              summaries.data.recovered.toLocaleString()
+              summaries.recovered.toLocaleString()
             }}</span>
             <span class="block md:hidden">{{
-              summaries.data.recovered | formatValue
+              summaries.recovered | formatValue
             }}</span>
           </div>
         </div>
@@ -98,10 +98,10 @@
             class="text-base md:text-xl mt-1 md:mt-0 font-bold text-gray-700 text-center"
           >
             <span class="hidden md:block">{{
-              summaries.data.deaths.toLocaleString()
+              summaries.deaths.toLocaleString()
             }}</span>
             <span class="block md:hidden">{{
-              summaries.data.deaths | formatValue
+              summaries.deaths | formatValue
             }}</span>
           </div>
         </div>
@@ -127,16 +127,17 @@ export default {
     ...mapGetters({ summaries: 'summaries/getWorld' }),
     Active() {
       return (
-        this.summaries.data.total_cases -
-        (this.summaries.data.recovered + this.summaries.data.deaths)
+        this.summaries.cases -
+        (this.summaries.recovered + this.summaries.deaths)
       )
     }
   },
-  // mounted() {
-  //   this.$echo.channel('daily').listen('.total.world', (e) => {
-  //     this.update(e.data)
-  //   })
-  // },
+  mounted() {
+    this.$echo.channel('daily').listen('.total.world', (e) => {
+      // eslint-disable-next-line
+      console.log(e)
+    })
+  },
   methods: {
     ...mapActions({ update: 'summaries/updateWorld' })
   }
