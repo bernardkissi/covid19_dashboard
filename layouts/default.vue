@@ -253,7 +253,11 @@
     <nuxt />
     <div class="flex items-center justify-center text-gray-700">
       <div class="flex flex-col pb-4">
-        <a href="https://twitter.com/OwireduBernard" target="_blank">
+        <a
+          href="https://twitter.com/OwireduBernard"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
           <button
             class="flex items-center text-xs uppercase font-bold px-4 py-2 rounded-md text-blue-500 bg-gray-300 dark:bg-gray-900"
           >
