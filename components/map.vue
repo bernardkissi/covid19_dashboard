@@ -158,6 +158,8 @@ export default {
   },
   beforeMount() {
     this.cases = this.prepareData
+    // eslint-disable-next-line
+    console.log(this.cases)
   },
   mounted() {
     const _this = this
@@ -278,7 +280,7 @@ export default {
     _this.polygonSeries.events.on('inited', function() {
       _this.polygonSeries.mapPolygons.each(function(polygon) {
         const label = labelSeries.mapImages.create()
-        const state = polygon.dataItem.dataContext.id
+        const state = polygon.dataItem.dataContext.id.split('-').pop()
         label.latitude = polygon.visualLatitude
         label.longitude = polygon.visualLongitude
         label.children.getIndex(0).text = state
@@ -312,6 +314,8 @@ export default {
       this.polygonSeries.getPolygonById(id).isHover = true
       this.polygonSeries.getPolygonById(id).isActive = true
       this.activated = id
+      // eslint-disable-next-line
+      console.log([id, value])
     },
     unsetActive(id) {
       if (id !== '') {
