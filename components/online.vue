@@ -1,5 +1,5 @@
 <template>
-  <div class="text-sm shadow-md">
+  <div class="text-sm shadow-md text-gray-700">
     <div v-if="$nuxt.isOffline">
       <div
         class="flex items-center justify-center px-4 py-2 bg-gray-200 dark:bg-gray-700"

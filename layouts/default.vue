@@ -6,6 +6,7 @@
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-400 focus:outline-none dark-focus:outline-none dark-focus:bg-gray-900 focus:bg-gray-100 focus:text-white transition duration-150 ease-in-out"
+              aria-label="open menu"
             >
               <svg
                 v-if="open === false"
@@ -157,6 +158,7 @@
           <div class="flex items-center justify-center">
             <button
               v-if="themeColor === 'light'"
+              aria-label="switch color mode"
               class="dark-focus:outline-none focus:outline-none pr-6 md:pr-0"
               @click="themeMode('dark')"
             >
@@ -171,6 +173,7 @@
             <button
               v-else
               class="dark-focus:outline-none focus:outline-none pr-6 md:pr-0"
+              aria-label="switch color mode"
               @click="themeMode('light')"
             >
               <svg width="20" height="20">

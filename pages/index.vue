@@ -4,26 +4,32 @@
   >
     <div class="grid grid-cols-1 gap-0 lg:grid-cols-4 lg:gap-12">
       <div class="col-span-1 lg:col-span-2">
-        <div class="relative">
-          <input
-            v-model="search"
-            class="outline-none p-4 px-16 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 rounded-md w-full shadow-xl 
-            dark:placeholder-gray-300 placeholder-gray-700"
-            type="text"
-            placeholder="Search Regions, eg. Greater Accra, Ashanti, Northen"
-          />
-          <div class="absolute top-0">
-            <svg class="h-6 w-6 mt-4 ml-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-                stroke="#4A5568"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+        <label for="search">
+          <div class="font-medium text-base text-center text-gray-800">
+            Search Regions
           </div>
-        </div>
+          <div class="relative">
+            <input
+              id="search"
+              v-model="search"
+              class="outline-none p-4 px-16 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 rounded-md w-full shadow-xl 
+                  dark:placeholder-gray-300 placeholder-gray-700"
+              type="text"
+              placeholder="Eg. Greater Accra, Ashanti, Northen"
+            />
+            <div class="absolute top-0">
+              <svg class="h-6 w-6 mt-4 ml-6" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                  stroke="#4A5568"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </label>
 
         <div class="flex items-center justify-center mt-8">
           <button
@@ -77,13 +83,13 @@
         <Table :search-keyword="search" />
         <!-- Actual Table Ends  -->
         <!-- end of table -->
-        <div class="mt-6">
+        <div class="mt-6 text-gray-800">
           <div class="text-xl font-semibold">
             Questions we get asked
           </div>
           <div class="mt-3">
             <h1 class="text-base font-semibold">What are your sources?</h1>
-            <p class="dark:text-gray-500 text-gray-600 text-sm leading-5">
+            <p class="dark:text-gray-500 text-gray-700 text-sm leading-5">
               We are using state bulletins and official government handles to
               update our numbers. The data is validated by a group of volunteers
               and published into a Google sheet and an API.
@@ -93,28 +99,28 @@
             <h1 class="text-base font-semibold">
               Where can I find the data for this?
             </h1>
-            <p class="dark:text-gray-500 text-gray-600 text-sm leading-5">
+            <p class="dark:text-gray-500 text-gray-700 text-sm leading-5">
               If you want access to our data API or raw sheet data, kindly send
               an email to bernardkissi18@gmail.com stating the purpose of use.
             </p>
           </div>
           <div class="mt-4">
             <h1 class="text-base font-semibold">Who are you ?</h1>
-            <p class="dark:text-gray-500 text-gray-600 text-sm leading-5">
+            <p class="dark:text-gray-500 text-gray-700 text-sm leading-5">
               We are a group of dedicated volunteers who curate and verify the
               data coming from several sources.
             </p>
           </div>
           <div class="mt-4">
             <h1 class="text-base font-semibold">Are you offical?</h1>
-            <p class="dark:text-gray-500 text-gray-600 text-sm leading-5">
+            <p class="dark:text-gray-500 text-gray-700 text-sm leading-5">
               No we are not offical, but we seek to help in the fight against
               virus.
             </p>
           </div>
           <div class="mt-4">
             <h1 class="text-base font-semibold">Do you want to support?</h1>
-            <p class="dark:text-gray-500 text-gray-600 text-sm leading-5">
+            <p class="dark:text-gray-500 text-gray-700 text-sm leading-5">
               Support volunteers to keep on the fight against coronavirus
             </p>
             <a
@@ -136,10 +142,10 @@
       >
         <div class="flex items-start justify-between">
           <div>
-            <div class="text-2xl font-semibold">
+            <div class="text-2xl font-semibold text-gray-800">
               Regional Breakdown
             </div>
-            <div class="mb-4 font-medium text-gray-600 dark:text-gray-400">
+            <div class="mb-4 font-normal text-gray-700 dark:text-gray-400">
               View regional distribution of cases and trends. Click on cards to
               view map details
             </div>
@@ -152,18 +158,18 @@
         <Map />
         <!-- end of regional map -->
         <!-- Spread trends weekly -->
-        <div class="mt-8">
+        <div class="mt-8 text-gray-800">
           <div class="text-2xl font-semibold">
             Spread Trends
           </div>
-          <div class="mb-2 font-medium dark:text-gray-500 text-gray-600">
+          <div class="mb-2 font-normal dark:text-gray-500 text-gray-700">
             View weekly updates of coronavirus across Ghana.
           </div>
           <div class="flex items-center py-2">
             <button
               class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 px-1 md:px-3 py-2 font-medium rounded-md tracking-wide"
               :class="{
-                'dark:bg-red-500 dark:text-white bg-red-500 text-white px-3 md:px-4 py-2 shadow-lg':
+                'dark:bg-red-500 dark:text-white bg-red-600 text-white px-3 md:px-4 py-2 shadow-lg':
                   activeTrend === 'Confirmed'
               }"
               @click="dynamicTrend('Confirmed')"
@@ -174,7 +180,7 @@
               class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
               :class="{
-                'dark:bg-blue-500 dark:text-white bg-blue-500 text-white px-3 py-2 shadow-lg':
+                'dark:bg-blue-500 dark:text-white bg-blue-600 text-white px-3 py-2 shadow-lg':
                   activeTrend === 'Active'
               }"
               @click="dynamicTrend('Active')"
@@ -185,7 +191,7 @@
               class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
               :class="{
-                'dark:bg-green-500 dark:text-white bg-green-500 text-white px-3 md:px-4 py-2 shadow-lg':
+                'dark:bg-green-500 dark:text-white bg-green-600 text-white px-3 md:px-4 py-2 shadow-lg':
                   activeTrend === 'Recovered'
               }"
               @click="dynamicTrend('Recovered')"
@@ -196,7 +202,7 @@
               class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
               :class="{
-                'dark:bg-gray-900 dark:text-white bg-gray-500 text-white px-3 md:px-4 py-2 shadow-lg':
+                'dark:bg-gray-900 dark:text-white bg-gray-600 text-white px-3 md:px-4 py-2 shadow-lg':
                   activeTrend === 'Deaths'
               }"
               @click="dynamicTrend('Deaths')"
@@ -213,14 +219,14 @@
         </div>
         <!-- end of spread trends -->
         <!-- demographics -->
-        <div class="mt-8">
+        <div class="mt-8 text-gray-800">
           <div class="text-2xl font-semibold">
             General Information
           </div>
-          <div class="mb-2 font-medium dark:text-gray-500 text-gray-600">
+          <div class="mb-2 font-normal dark:text-gray-500 text-gray-700">
             View weekly trends of coronavirus across Ghana.
           </div>
-          <div class="flex items-center py-2">
+          <div class="flex items-center py-2 text-gray-800">
             <button
               class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
@@ -236,7 +242,7 @@
               class="dark-focus:outline-none focus:outline-none dark:bg-gray-700 dark:text-gray-100 bg-gray-300 ml-1 px-2 md:px-3 py-2 font-medium tracking-wide rounded-md
               transition  duration-500 ease-in-out"
               :class="{
-                'dark:bg-orange-500 dark:text-white bg-orange-500 text-white px-4 py-2 shadow-lg':
+                'dark:bg-orange-500 dark:text-white bg-orange-600 text-white px-4 py-2 shadow-lg':
                   activeDemo === 'Critical'
               }"
               @click="dynamicDemo('Critical')"

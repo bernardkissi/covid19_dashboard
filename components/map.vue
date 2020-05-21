@@ -8,7 +8,7 @@
     <keep-alive>
       <div id="map" ref="mapdiv"></div>
     </keep-alive>
-    <div class="mt-1 text-gray-700 dark:text-gray-400">
+    <div class="mt-1 text-gray-800 dark:text-gray-400">
       <div class="flex items-center justify-start">
         <svg class="h-6 w-6 mt-2 mr-1" viewBox="0 0 24 24">
           <path
@@ -25,9 +25,11 @@
           Current Map Insights
         </h3>
       </div>
-      {{ getHighName }} Region has the highest number {{ high }} in
-      {{ caseSelected }} cases and {{ getLowName }} Region has the least number
-      {{ low }} in {{ caseSelected }} cases.
+      <div class="text-gray-700 dark:text-gray-300">
+        {{ getHighName }} Region has the highest number {{ high }} in
+        {{ caseSelected }} cases and {{ getLowName }} Region has the least
+        number {{ low }} in {{ caseSelected }} cases.
+      </div>
     </div>
   </div>
 </template>

@@ -5,27 +5,27 @@
         <thead>
           <tr>
             <th
-              class="w-2/5 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-700 uppercase tracking-wider border-r border-gray-100"
+              class="w-2/5 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-800 uppercase tracking-wider border-r border-gray-100"
             >
               Regions
             </th>
             <th
-              class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-700 uppercase tracking-wider border-r border-gray-100"
+              class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-800 uppercase tracking-wider border-r border-gray-100"
             >
               Confirmed
             </th>
             <th
-              class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-700 uppercase tracking-wider border-r border-gray-100"
+              class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-800 uppercase tracking-wider border-r border-gray-100"
             >
               Active
             </th>
             <th
-              class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-700 uppercase tracking-wider border-r border-gray-100"
+              class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-800 uppercase tracking-wider border-r border-gray-100"
             >
               Recover
             </th>
             <th
-              class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-700 uppercase tracking-wider border-r border-gray-100"
+              class="w-1/6 px-5 py-3 border-b dark:border-gray-800 dark:bg-gray-900 bg-gray-400 text-left text-xs leading-4 font-bold dark:text-gray-200 text-gray-800 uppercase tracking-wider border-r border-gray-100"
             >
               Deaths
             </th>
@@ -43,7 +43,7 @@
             @click.prevent="setRegion(region.name)"
           >
             <td
-              class="w-2/5 px-5 py-4 leading-4 text-xs dark:text-gray-100 text-gray-700 font-bold border-b border-gray-400 dark:border-gray-600  bg-gray-200 dark:bg-gray-700 uppercase tracking-wider"
+              class="w-2/5 px-5 py-4 leading-4 text-xs dark:text-gray-100 text-gray-800 font-bold border-b border-gray-400 dark:border-gray-600  bg-gray-200 dark:bg-gray-700 uppercase tracking-wider"
             >
               <div class="flex items-center">
                 <span>

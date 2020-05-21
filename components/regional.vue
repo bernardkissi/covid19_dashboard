@@ -2,7 +2,7 @@
   <div>
     <div class="flex items-center justify-between">
       <div
-        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-red-100 border-b-2 border-red-600 rounded-md shadow-none cursor-pointer"
+        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-red-200 border-b-2 border-red-600 rounded-md shadow-none cursor-pointer"
         :class="{
           'md:shadow-lg border border-red-600': caseSelected === 'confirmed'
         }"
@@ -10,22 +10,22 @@
       >
         <div class="flex flex-col justify-between">
           <div
-            class="mb-1 flex items-center justify-center tracking-normal uppercase dark:text-gray-600 text-red-400 text-xs font-bold text-center"
+            class="mb-1 flex items-center justify-center tracking-normal uppercase dark:text-gray-600 text-red-800 text-xs font-bold text-center"
             :class="{
-              'dark:text-red-600 text-red-600': caseSelected === 'confirmed'
+              'dark:text-red-600': caseSelected === 'confirmed'
             }"
           >
             cases
           </div>
           <div
-            class="text-base font-bold text-red-600 dark:text-gray-100 text-center"
+            class="text-base font-bold text-red-800 dark:text-gray-100 text-center"
           >
             {{ region.confirmed.toLocaleString() }}
           </div>
         </div>
       </div>
       <div
-        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-blue-100 border-b-2 border-blue-600 rounded-md cursor-pointer"
+        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-blue-200 border-b-2 border-blue-600 rounded-md cursor-pointer"
         :class="{
           'md:shadow-lg border border-blue-600': caseSelected === 'active'
         }"
@@ -33,22 +33,22 @@
       >
         <div class="flex flex-col justify-between">
           <div
-            class="mb-1 flex items-center justify-center tracking-normal dark:text-gray-600 text-blue-400  uppercase text-xs font-bold text-center"
+            class="mb-1 flex items-center justify-center tracking-normal dark:text-gray-600 text-blue-800  uppercase text-xs font-bold text-center"
             :class="{
-              'dark:text-blue-600 text-blue-600': caseSelected === 'active'
+              'dark:text-blue-600 text-blue-800': caseSelected === 'active'
             }"
           >
             Active
           </div>
           <div
-            class="text-base font-bold text-blue-600 dark:text-gray-100 text-center"
+            class="text-base font-bold text-blue-800 dark:text-gray-100 text-center"
           >
             {{ region.active.toLocaleString() }}
           </div>
         </div>
       </div>
       <div
-        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-green-100 border-b-2 border-green-600 rounded-md  cursor-pointer"
+        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-green-200 border-b-2 border-green-600 rounded-md  cursor-pointer"
         :class="{
           'md:shadow-lg border border-green-600': caseSelected === 'recovered'
         }"
@@ -56,22 +56,22 @@
       >
         <div class="flex flex-col justify-between">
           <div
-            class="mb-1 flex items-center justify-center tracking-normal dark:text-gray-600 text-green-400  uppercase text-xs font-bold text-center"
+            class="mb-1 flex items-center justify-center tracking-normal dark:text-gray-600 text-green-800  uppercase text-xs font-bold text-center"
             :class="{
-              'dark:text-green-600 text-green-600': caseSelected === 'recovered'
+              'dark:text-green-600': caseSelected === 'recovered'
             }"
           >
             Recover
           </div>
           <div
-            class="text-base font-bold text-green-600 dark:text-gray-100 text-center"
+            class="text-base font-bold text-green-800 dark:text-gray-100 text-center"
           >
             {{ region.recovered.toLocaleString() }}
           </div>
         </div>
       </div>
       <div
-        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-gray-100 border-b-2 border-gray-600 rounded-md  cursor-pointer"
+        class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-gray-200 border-b-2 border-gray-600 rounded-md  cursor-pointer"
         :class="{
           'md:shadow-lg border border-gray-600': caseSelected === 'deceased'
         }"
@@ -79,37 +79,37 @@
       >
         <div class="flex flex-col justify-between">
           <div
-            class="mb-1 flex items-center justify-center tracking-normal dark:text-gray-600 text-gray-500  uppercase text-xs font-bold text-center"
+            class="mb-1 flex items-center justify-center tracking-normal dark:text-gray-600 text-gray-800  uppercase text-xs font-bold text-center"
             :class="{
-              'dark:text-gray-700 text-gray-700': caseSelected === 'deceased'
+              'dark:text-gray-700': caseSelected === 'deceased'
             }"
           >
             Deaths
           </div>
           <div
-            class="text-base font-bold text-gray-600 dark:text-gray-100 text-center"
+            class="text-base font-bold text-gray-800 dark:text-gray-100 text-center"
           >
             {{ region.deceased.toLocaleString() }}
           </div>
         </div>
       </div>
       <div
-        class="hidden md:block w-1/4 md:w-1/6 py-3 dark:bg-gray-900 bg-purple-100 rounded-md border-b-2 border-purple-600 cursor-pointer"
+        class="hidden md:block w-1/4 md:w-1/6 py-3 dark:bg-gray-900 bg-purple-200 rounded-md border-b-2 border-purple-600 cursor-pointer"
         :class="{
           'shadow-lg': caseSelected === 'tested'
         }"
       >
         <div class="flex flex-col justify-between">
           <div
-            class="mb-1 flex items-center justify-center tracking-normaldark:text-gray-600 text-purple-400 uppercase text-xs font-bold text-center"
+            class="mb-1 flex items-center justify-center tracking-normaldark:text-gray-600 text-purple-800 uppercase text-xs font-bold text-center"
             :class="{
-              'dark:text-purple-600 text-purple-600': caseSelected === 'tested'
+              'dark:text-purple-600': caseSelected === 'tested'
             }"
           >
             Tested
           </div>
           <div
-            class="text-base font-bold text-purple-600 dark:text-gray-100 text-center"
+            class="text-base font-bold text-purple-800 dark:text-gray-100 text-center"
           >
             N/A
           </div>
@@ -117,7 +117,9 @@
       </div>
     </div>
     <div class="flex items-center justify-between mt-6">
-      <div class="flex flex-col text-base md:text-xl font-semibold">
+      <div
+        class="flex flex-col text-base text-gray-700 md:text-xl font-semibold"
+      >
         <div>{{ region.name }} Region</div>
         <div
           class="text-xs md:text-sm uppercase mt-1  font-extrabold"
