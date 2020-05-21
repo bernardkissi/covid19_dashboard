@@ -36,8 +36,8 @@ export const mutations = {
 export const actions = {
   async fetchTrends({ commit }) {
     const [daily, weekly] = await Promise.all([
-      this.$axios.get('https://ghcovid19cases.live/api/getDailyUpdates'),
-      this.$axios.get('https://ghcovid19cases.live/api/getWeeklyUpdates')
+      this.$axios.get('http://206.189.16.193//api/getDailyUpdates'),
+      this.$axios.get('http://206.189.16.193//api/getWeeklyUpdates')
     ])
     commit('putDaily', daily.data)
     commit('putWeekly', weekly.data)
