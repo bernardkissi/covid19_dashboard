@@ -11,7 +11,7 @@
       >
         <div class="flex flex-col justify-between">
           <div
-            class="tracking-normal text-red-800 uppercase text-xs md:text-sm font-extrabold text-center"
+            class="tracking-normal text-red-700 uppercase text-xs md:text-sm font-bold text-center"
           >
             Cases
           </div>
@@ -37,7 +37,7 @@
       >
         <div class="flex flex-col justify-between">
           <div
-            class="tracking-normal text-blue-800 uppercase text-xs md:text-sm font-extrabold text-center"
+            class="tracking-normal text-blue-700 uppercase text-xs md:text-sm font-bold text-center"
           >
             Active
           </div>
@@ -59,7 +59,7 @@
       >
         <div class="flex flex-col justify-between">
           <div
-            class="tracking-normal text-green-800 uppercase text-xs md:text-sm font-extrabold text-center"
+            class="tracking-normal text-green-700 uppercase text-xs md:text-sm font-bold text-center"
           >
             Recover
           </div>
@@ -85,7 +85,7 @@
       >
         <div class="flex flex-col justify-between">
           <div
-            class="tracking-normal text-gray-800 uppercase text-xs md:text-sm font-bold text-center"
+            class="tracking-normal text-gray-700 uppercase text-xs md:text-sm font-bold text-center"
           >
             Deaths
           </div>

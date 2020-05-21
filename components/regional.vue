@@ -27,7 +27,7 @@
       <div
         class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-blue-200 border-b-2 border-blue-600 rounded-md cursor-pointer"
         :class="{
-          'md:shadow-lg border border-blue-600': caseSelected === 'active'
+          'md:shadow-lg border-2 border-blue-600': caseSelected === 'active'
         }"
         @click.prevent="setCase('active')"
       >
@@ -50,7 +50,7 @@
       <div
         class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-green-200 border-b-2 border-green-600 rounded-md  cursor-pointer"
         :class="{
-          'md:shadow-lg border border-green-600': caseSelected === 'recovered'
+          'md:shadow-lg border-2 border-green-600': caseSelected === 'recovered'
         }"
         @click.prevent="setCase('recovered')"
       >
@@ -73,7 +73,7 @@
       <div
         class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-gray-200 border-b-2 border-gray-600 rounded-md  cursor-pointer"
         :class="{
-          'md:shadow-lg border border-gray-600': caseSelected === 'deceased'
+          'md:shadow-lg border-2 border-gray-600': caseSelected === 'deceased'
         }"
         @click.prevent="setCase('deceased')"
       >
@@ -152,7 +152,7 @@
           >
         </div>
         <span
-          class="text-base md:text-lg font-semibold text-green-400 text-right"
+          class="text-base md:text-lg font-semibold text-green-500 text-right"
         >
           <timeago :datetime="region.updated_at" :auto-update="10"></timeago>
         </span>
