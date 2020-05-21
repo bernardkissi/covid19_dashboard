@@ -278,7 +278,7 @@ export default {
     _this.polygonSeries.events.on('inited', function() {
       _this.polygonSeries.mapPolygons.each(function(polygon) {
         const label = labelSeries.mapImages.create()
-        const state = polygon.dataItem.dataContext.id.split('-').pop()
+        const state = polygon.dataItem.dataContext.id
         label.latitude = polygon.visualLatitude
         label.longitude = polygon.visualLongitude
         label.children.getIndex(0).text = state
