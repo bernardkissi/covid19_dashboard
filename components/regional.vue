@@ -4,7 +4,7 @@
       <div
         class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-red-200 border-b-2 border-red-600 rounded-md shadow-none cursor-pointer"
         :class="{
-          'md:shadow-lg border border-red-600': caseSelected === 'confirmed'
+          'md:shadow-lg border-2 border-red-600': caseSelected === 'confirmed'
         }"
         @click.prevent="setCase('confirmed')"
       >
