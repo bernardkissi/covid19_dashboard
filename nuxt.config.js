@@ -1,8 +1,9 @@
-require('dotenv').config()
+const env = require('dotenv').config()
 
 export default {
   mode: 'universal',
 
+  env: env.parsed,
   /*
    ** Headers of the page
    */
@@ -67,10 +68,12 @@ export default {
         broadcaster: 'pusher',
         key: 'dmB12C35',
         cluster: 'mt1',
-        encrypted: false,
+        encrypted: true,
         wsHost: '127.0.0.1',
         wsPort: 6001,
-        disableStats: false
+        wssPort: 6001,
+        disableStats: true,
+        enabledTransports: ['ws', 'wss']
       }
     ]
   ],
@@ -103,7 +106,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: process.env.API_URL || 'http://covid19.test/api'
+    baseURL: env.parsed.API_URL
   },
   /*
    ** Build configuration

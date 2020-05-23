@@ -52,9 +52,7 @@ export const mutations = {
 
 export const actions = {
   async fetchRegions({ commit }) {
-    const regions = await this.$axios.get(
-      'http://206.189.16.193/api/getRegionalData'
-    )
+    const regions = await this.$axios.get('/getRegionalData')
     commit('addRegion', regions.data)
     commit('putRegion', 'Greater Accra')
   },
