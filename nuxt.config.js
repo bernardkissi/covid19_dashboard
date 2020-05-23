@@ -45,22 +45,22 @@ export default {
    */
   css: [],
 
-  // progressive web app settings
-  pwa: {
-    manifest: {
-      name: 'GhCovid19',
-      short_name: 'GhCovid19',
-      start_url: '/',
-      display: 'standalone',
-      background_color: '#fff',
-      theme_color: '#F6AD55',
-      orientation: 'portrait',
-      description: 'Ghana Covid19 platform'
-    },
-    icon: {
-      iconSrc: '/icon512.png'
-    }
-  },
+  // // progressive web app settings
+  // pwa: {
+  //   manifest: {
+  //     name: 'GhCovid19',
+  //     short_name: 'GhCovid19',
+  //     start_url: '/',
+  //     display: 'standalone',
+  //     background_color: '#fff',
+  //     theme_color: '#F6AD55',
+  //     orientation: 'portrait',
+  //     description: 'Ghana Covid19 platform'
+  //   },
+  //   icon: {
+  //     iconSrc: '/icon512.png'
+  //   }
+  // },
   /*
    ** Plugins to load before mounting the App
    
