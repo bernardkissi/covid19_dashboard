@@ -1,7 +1,7 @@
 {
   "name": "ghcovid19_tracker",
   "version": "1.0.0",
-  "description": "covid 19 data visualization platform to track cases in ghana",
+  "description": "Covid18 data visualization platform to track cases in ghana",
   "author": "bernardkissi",
   "private": true,
   "scripts": {
