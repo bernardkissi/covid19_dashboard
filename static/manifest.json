@@ -1,5 +1,12 @@
 {
- "name": "App",
+ "name": "GhCovid19",
+ "short_name": "GhCovid19",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#fff",
+ "theme_color": "#F6AD55",
+ "orientation": "portrait",
+ "description": "A simply readable Hacker News app.",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
