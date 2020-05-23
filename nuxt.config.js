@@ -8,7 +8,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - Ghana Covid19 Cases Tracker',
+    title: 'Ghana Covid19 Cases Tracker',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
