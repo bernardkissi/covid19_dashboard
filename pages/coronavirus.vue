@@ -209,6 +209,7 @@
 
 <script>
 export default {
+  transition: 'component-fade',
   head() {
     return {
       meta: [
@@ -223,4 +224,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.component-fade-enter,
+.component-fade-leave-to {
+  opacity: 0;
+}
+</style>
