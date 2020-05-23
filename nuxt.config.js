@@ -34,7 +34,10 @@ export default {
         content: 'coronavirus, covid19, ghana coronavirus, ghana updates'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      // { rel: 'manifest' href:'/manifest.json'}
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -44,23 +47,6 @@ export default {
    ** Global CSS
    */
   css: [],
-
-  // progressive web app settings
-  pwa: {
-    manifest: {
-      name: 'GhCovid19',
-      short_name: 'GhCovid19',
-      start_url: '/',
-      display: 'standalone',
-      background_color: '#fff',
-      theme_color: '#F6AD55',
-      orientation: 'portrait',
-      description: 'Ghana Covid19 platform'
-    },
-    icon: {
-      iconSrc: '/icon512.png'
-    }
-  },
 
   // plugins before mounting the app
   plugins: [
@@ -98,6 +84,23 @@ export default {
     // add '~tailwind.config` alias
     exposeConfig: true
   },
+
+  // progressive web app settings
+  pwa: {
+    manifest: {
+      short_name: 'GhCovid19',
+      start_url: '/',
+      display: 'standalone',
+      background_color: '#fff',
+      theme_color: '#F6AD55',
+      orientation: 'portrait',
+      description: 'Ghana Covid19 platform'
+    },
+    icon: {
+      iconSrc: '/icon512.png'
+    }
+  },
+
   /*
    ** Nuxt.js modules
    */
