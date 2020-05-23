@@ -8,7 +8,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Ghana Covid19 Cases Tracker',
+    titleTemplate: '%s - Ghana Covid19 Cases Tracker',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -45,25 +45,24 @@ export default {
    */
   css: [],
 
-  // // progressive web app settings
-  // pwa: {
-  //   manifest: {
-  //     name: 'GhCovid19',
-  //     short_name: 'GhCovid19',
-  //     start_url: '/',
-  //     display: 'standalone',
-  //     background_color: '#fff',
-  //     theme_color: '#F6AD55',
-  //     orientation: 'portrait',
-  //     description: 'Ghana Covid19 platform'
-  //   },
-  //   icon: {
-  //     iconSrc: '/icon512.png'
-  //   }
-  // },
-  /*
-   ** Plugins to load before mounting the App
-   
+  // progressive web app settings
+  pwa: {
+    manifest: {
+      name: 'GhCovid19',
+      short_name: 'GhCovid19',
+      start_url: '/',
+      display: 'standalone',
+      background_color: '#fff',
+      theme_color: '#F6AD55',
+      orientation: 'portrait',
+      description: 'Ghana Covid19 platform'
+    },
+    icon: {
+      iconSrc: '/icon512.png'
+    }
+  },
+
+  // plugins before mounting the app
   plugins: [
     { src: '~/plugins/map.js', ssr: false },
     { src: '~/plugins/trends.js', ssr: false },
