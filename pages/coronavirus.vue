@@ -210,16 +210,15 @@
 <script>
 export default {
   transition: 'component-fade',
-  head() {
-    return {
-      meta: [
-        {
-          hid: 'title',
-          name: 'twitter:description',
-          content: 'About Coronavirus and Prevention'
-        }
-      ]
-    }
+  head: {
+    title: 'About Coronavirus',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Information about coronavirus, spread and prevention'
+      }
+    ]
   }
 }
 </script>
