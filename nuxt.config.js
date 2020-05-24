@@ -74,7 +74,8 @@ export default {
         wsHost: '127.0.0.1',
         wsPort: process.env.PUSHER_PORT,
         wssPort: process.env.PUSHER_PORT,
-        disableStats: true
+        disableStats: true,
+        enabledTransports: ['ws', 'wss']
       }
     ]
   ],
