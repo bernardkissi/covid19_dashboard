@@ -72,8 +72,8 @@ export default {
         cluster: process.env.PUSHER_APP_CLUSTER,
         encrypted: true,
         wsHost: '127.0.0.1',
-        wsPort: process.env.PUSHER_PORT,
-        wssPort: process.env.PUSHER_PORT,
+        wsPort: 6001,
+        wssPort: 6001,
         disableStats: true,
         enabledTransports: ['ws', 'wss']
       }
