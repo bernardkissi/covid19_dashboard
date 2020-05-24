@@ -327,6 +327,8 @@ export default {
   mounted() {
     this.$echo.channel('daily').listen('.total.world', (e) => {
       this.update(e)
+      // eslint-disable-next-line
+      console.log(e)
     })
 
     this.$echo.channel('daily').listen('.corona.weekly', (e) => {
