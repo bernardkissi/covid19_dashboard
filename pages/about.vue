@@ -89,8 +89,16 @@
 </template>
 <script>
 export default {
-  data: () => ({
-    message: 'ds'
-  })
+  head: {
+    title: 'About Us',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'We group of volunteers helping fight aganist coronavirus in ghana'
+      }
+    ]
+  }
 }
 </script>

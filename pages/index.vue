@@ -347,6 +347,16 @@ export default {
     dynamicDemo(component) {
       this.activeDemo = component
     }
+  },
+  head: {
+    title: 'Ghana Cases Dashboard',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Ghana coronavirus cases tracker'
+      }
+    ]
   }
 }
 </script>
