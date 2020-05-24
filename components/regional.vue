@@ -4,7 +4,7 @@
       <div
         class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-red-200 border-b-2 border-red-600 rounded-md shadow-none cursor-pointer"
         :class="{
-          'md:shadow-lg border-2 border-red-600': caseSelected === 'confirmed'
+          'md:shadow-lg': caseSelected === 'confirmed'
         }"
         @click.prevent="setCase('confirmed')"
       >
@@ -27,7 +27,7 @@
       <div
         class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-blue-200 border-b-2 border-blue-600 rounded-md cursor-pointer"
         :class="{
-          'md:shadow-lg border-2 border-blue-600': caseSelected === 'active'
+          'md:shadow-lg': caseSelected === 'active'
         }"
         @click.prevent="setCase('active')"
       >
@@ -50,7 +50,7 @@
       <div
         class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-green-200 border-b-2 border-green-600 rounded-md  cursor-pointer"
         :class="{
-          'md:shadow-lg border-2 border-green-600': caseSelected === 'recovered'
+          'md:shadow-lg': caseSelected === 'recovered'
         }"
         @click.prevent="setCase('recovered')"
       >
@@ -73,7 +73,7 @@
       <div
         class="w-1/4 md:w-1/6 mr-2 md:mr-0 py-3 dark:bg-gray-900 bg-gray-200 border-b-2 border-gray-600 rounded-md  cursor-pointer"
         :class="{
-          'md:shadow-lg border-2 border-gray-600': caseSelected === 'deceased'
+          'md:shadow-lg': caseSelected === 'deceased'
         }"
         @click.prevent="setCase('deceased')"
       >
