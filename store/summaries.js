@@ -16,7 +16,7 @@ export const mutations = {
 
 export const actions = {
   async fetchWorld({ commit }) {
-    const response = await this.$axios.get('http://covid19.test/api/world')
+    const response = await this.$axios.get('/world')
     commit('putWorld', response.data)
   },
 
