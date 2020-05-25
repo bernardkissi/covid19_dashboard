@@ -71,7 +71,7 @@ export default {
         key: 'dmB12C35',
         cluster: 'mt1',
         encrypted: true,
-        wsHost: 'api.ghcovid19cases.live',
+        wsHost: '127.0.0.1',
         wsPort: 6002,
         wssPort: 6002,
         disableStats: true,
