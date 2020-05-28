@@ -70,13 +70,13 @@ export default {
         broadcaster: 'pusher',
         key: process.env.PUSHER_APP_KEY,
         cluster: process.env.PUSHER_APP_CLUSTER,
-        forceTLS: true,
+        // forceTLS: true,
         encrypted: true,
         wsHost: process.env.WEBSOCKET_HOST,
         wsPort: process.env.PUSHER_PORT,
-        wssPort: process.env.PUSHER_PORT,
+        // wssPort: process.env.PUSHER_PORT,
         disableStats: true,
-        enabledTransports: ['ws', 'wss']
+        // enabledTransports: ['ws', 'wss']
       }
     ]
   ],
