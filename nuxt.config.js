@@ -89,6 +89,7 @@ export default {
   // progressive web app settings
   pwa: {
     manifest: {
+      name: 'GhCovid19',
       short_name: 'GhCovid19',
       start_url: '/',
       display: 'standalone',
