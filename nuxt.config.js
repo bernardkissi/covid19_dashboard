@@ -68,12 +68,12 @@ export default {
       '@nuxtjs/laravel-echo',
       {
         broadcaster: 'pusher',
-        key: env.parsed.PUSHER_APP_KEY,
-        cluster: env.parsed.PUSHER_APP_CLUSTER,
+        key: process.env.PUSHER_APP_KEY,
+        cluster: process.env.PUSHER_APP_CLUSTER,
         encrypted: true,
-        wsHost: env.parsed.WEBSOCKET_HOST,
-        wsPort: env.parsed.PUSHER_PORT,
-        wssPort: env.parsed.PUSHER_PORT,
+        wsHost: process.env.WEBSOCKET_HOST,
+        wsPort: process.env.PUSHER_PORT,
+        wssPort: process.env.PUSHER_PORT,
         disableStats: true,
         enabledTransports: ['ws', 'wss']
       }
