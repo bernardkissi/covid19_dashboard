@@ -1,5 +1,5 @@
 {
-  "name": "ghcovid19_tracker",
+  "name": "ghcovid19",
   "version": "1.0.0",
   "description": "Covid18 data visualization platform to track cases in ghana",
   "author": "bernardkissi",
@@ -30,7 +30,7 @@
     "date-fns": "^2.13.0",
     "install": "^0.13.0",
     "nuxt": "^2.0.0",
-    "pusher-js": "^5.1.1",
+    "pusher-js": "^4.3.1",
     "tailwindcss-dark-mode": "^1.1.4",
     "v-tooltip": "^2.0.3",
     "vue-apexcharts": "^1.5.3",
