@@ -73,9 +73,9 @@ export default {
         encrypted: true,
         wsHost: process.env.WEBSOCKET_HOST,
         wsPort: process.env.PUSHER_PORT,
-        // wssPort: process.env.PUSHER_PORT,
-        disableStats: true
-        // enabledTransports: ['ws', 'wss']
+        wssPort: process.env.PUSHER_PORT,
+        disableStats: true,
+        enabledTransports: ['ws', 'wss']
       }
     ]
   ],
