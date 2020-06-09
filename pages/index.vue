@@ -83,7 +83,7 @@
         <Table :search-keyword="search" />
         <!-- Actual Table Ends  -->
         <!-- end of table -->
-        <div class="mt-6 text-gray-800">
+        <div class="hidden md:block mt-6 text-gray-800">
           <div class="text-xl font-semibold">
             Questions we get asked
           </div>
@@ -299,6 +299,7 @@ export default {
     }
   },
   data: () => ({
+    event: null,
     search: '',
     activeComponent: 'Overall',
     activeTrend: 'Confirmed',
@@ -325,19 +326,18 @@ export default {
     }
   },
   mounted() {
-    this.$echo.channel('daily').listen('.total.world', (e) => {
-      this.update(e)
+    this.$echo.channel('daily').on('.total.world', (e) => {
+      this.worldUpdate(e)
       // eslint-disable-next-line
       console.info(e)
     })
-
-    this.$echo.channel('daily').listen('.corona.weekly', (e) => {
+    this.$echo.channel('daily').on('.corona.weekly', (e) => {
       this.weeklyUpdate(e.data)
     })
   },
   methods: {
     ...mapActions({
-      update: 'summaries/updateWorld',
+      worldUpdate: 'summaries/updateWorld',
       weeklyUpdate: 'trends/updateWeekly'
     }),
     dynamicComponent(component) {

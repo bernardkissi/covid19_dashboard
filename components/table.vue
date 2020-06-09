@@ -162,7 +162,7 @@ export default {
     }
   },
   mounted() {
-    this.$echo.channel('regional').listen('.corona.regional', (e) => {
+    this.$echo.channel('regional').on('.corona.regional', (e) => {
       this.update(e)
       this.changeRegion(this.isSelected.name)
     })

@@ -101,7 +101,7 @@ export default {
     ...mapGetters({ total: 'trends/getTotals' })
   },
   mounted() {
-    this.$echo.channel('daily').listen('.corona.daily', (e) => {
+    this.$echo.channel('daily').on('.corona.daily', (e) => {
       this.update(e.data)
     })
   },
