@@ -54,7 +54,8 @@ export default {
     { src: '~/plugins/trends.js', ssr: false },
     { src: '~/plugins/time.js', ssr: false },
     { src: '~/plugins/tooltip.js', ssr: false },
-    { src: '~/plugins/localstorage.js', ssr: false }
+    { src: '~/plugins/localstorage.js', ssr: false },
+    { src: '~/plugins/events.js', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -70,11 +71,11 @@ export default {
         broadcaster: 'pusher',
         key: process.env.PUSHER_APP_KEY,
         cluster: process.env.PUSHER_APP_CLUSTER,
-        encrypted: true,
+        encrypted: false,
         wsHost: process.env.WEBSOCKET_HOST,
         wsPort: process.env.PUSHER_PORT,
         wssPort: process.env.PUSHER_PORT,
-        disableStats: true,
+        disableStats: false,
         enabledTransports: ['ws', 'wss']
       }
     ]
