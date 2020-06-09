@@ -71,7 +71,7 @@ export default {
         broadcaster: 'pusher',
         key: process.env.PUSHER_APP_KEY,
         cluster: process.env.PUSHER_APP_CLUSTER,
-        encrypted: false,
+        encrypted: true,
         wsHost: process.env.WEBSOCKET_HOST,
         wsPort: process.env.PUSHER_PORT,
         scheme: 'https',
