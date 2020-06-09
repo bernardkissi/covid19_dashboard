@@ -326,12 +326,12 @@ export default {
     }
   },
   mounted() {
-    this.$echo.channel('daily').on('.total.world', (e) => {
+    this.$echo.channel('daily').listen('.total.world', (e) => {
       this.worldUpdate(e)
       // eslint-disable-next-line
       console.info(e)
     })
-    this.$echo.channel('daily').on('.corona.weekly', (e) => {
+    this.$echo.channel('daily').listen('.corona.weekly', (e) => {
       this.weeklyUpdate(e.data)
     })
   },
