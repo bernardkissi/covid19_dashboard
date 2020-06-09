@@ -65,21 +65,20 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxtjs/pwa',
-    [
-      '@nuxtjs/laravel-echo',
-      {
-        broadcaster: 'pusher',
-        key: process.env.PUSHER_APP_KEY,
-        cluster: process.env.PUSHER_APP_CLUSTER,
-        encrypted: true,
-        wsHost: process.env.WEBSOCKET_HOST,
-        wsPort: process.env.PUSHER_PORT,
-        wssPort: process.env.PUSHER_PORT,
-        disableStats: false,
-        enabledTransports: ['ws', 'wss']
-      }
-    ]
+    '@nuxtjs/laravel-echo'
   ],
+
+  echo: {
+    broadcaster: 'pusher',
+    key: process.env.PUSHER_APP_KEY,
+    cluster: process.env.PUSHER_APP_CLUSTER,
+    encrypted: true,
+    wsHost: process.env.WEBSOCKET_HOST,
+    wsPort: process.env.PUSHER_PORT,
+    wssPort: process.env.PUSHER_PORT,
+    disableStats: true,
+    enabledTransports: ['ws', 'wss']
+  },
 
   tailwindcss: {
     // add '~tailwind.config` alias
