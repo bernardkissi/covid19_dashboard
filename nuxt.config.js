@@ -77,6 +77,7 @@ export default {
     wsPort: process.env.PUSHER_PORT,
     wssPort: process.env.PUSHER_PORT,
     disableStats: true,
+    forceTLS: true,
     enabledTransports: ['ws', 'wss']
   },
 
