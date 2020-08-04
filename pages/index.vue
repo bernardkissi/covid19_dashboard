@@ -9,7 +9,7 @@
       <div class="col-span-1 lg:col-span-2">
         <label for="search">
           <div
-            class="font-medium text-base text-center dark:text-gray-100 text-gray-800"
+            class="font-medium text-base text-center dark:text-gray-100 text-gray-800 pb-2"
           >
             Search Regions
           </div>
