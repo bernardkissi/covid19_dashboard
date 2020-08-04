@@ -1,13 +1,19 @@
 <template>
   <div class="mt-5">
-    <div
+    <div v-show="loading" class="p-48 ml-16 max-h-full">
+      <img src="~/assets/images/9.gif" />
+    </div>
+
+    <!-- <div
       class="flex items-center justify-center p-2 text-xs dark:text-gray-500 text-gray-600 -ml-16 font-medium"
     >
       Click anywhere on the map to interact
     </div>
-    <keep-alive>
+    -->
+    <div v-show="!loading">
       <div id="map" ref="mapdiv"></div>
-    </keep-alive>
+    </div>
+
     <div class="mt-1 text-gray-800 dark:text-gray-400">
       <div class="flex items-center justify-start">
         <svg class="h-6 w-6 mt-2 mr-1" viewBox="0 0 24 24">
@@ -25,7 +31,7 @@
           Current Map Insights
         </h3>
       </div>
-      <div class="text-gray-700 dark:text-gray-300">
+      <div v-if="!loading" class="text-gray-700 dark:text-gray-300">
         {{ getHighName }} Region has the highest number {{ high }} in
         {{ caseSelected }} cases and {{ getLowName }} Region has the least
         number {{ low }} in {{ caseSelected }} cases.
@@ -33,11 +39,12 @@
     </div>
   </div>
 </template>
-
+89516258
 <script>
 import { mapActions, mapGetters } from 'vuex'
 export default {
   data: () => ({
+    loading: true,
     region: '',
     map: {},
     high: 0,
@@ -149,9 +156,9 @@ export default {
     region(value) {
       this.changeRegion(value)
     },
-    active(value) {
-      this.setActiveState(value)
-    },
+    // active(value) {
+    //   this.setActiveState(value)
+    // },
     caseSelected(value) {
       this.recalculateData(value, this.selectColor)
     }
@@ -293,6 +300,8 @@ export default {
     // Create active state
     const activeState = polygonTemplate.states.create('active')
     activeState.properties.fill = am4core.color('#C53030')
+
+    this.loading = false
   },
   beforeDestroy() {
     if (this.map) {

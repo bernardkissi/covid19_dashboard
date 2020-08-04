@@ -21,6 +21,6 @@ export const actions = {
   },
 
   updateWorld({ commit }, payload) {
-    commit('putWorld', payload.data)
+    commit('putWorld', payload)
   }
 }

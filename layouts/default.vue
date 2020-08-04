@@ -253,7 +253,7 @@
       </div>
     </nav>
     <online />
-    <nuxt />
+    <nuxt keep-alive />
     <div class="flex items-center justify-center text-gray-700">
       <div class="flex flex-col pb-4">
         <a
@@ -286,7 +286,6 @@ export default {
     Online
   },
   data: () => ({
-    time: null,
     open: false,
     msg:
       'We use funds to keep ghCovid19.live runing by paying our cloud hosting services '
@@ -294,11 +293,14 @@ export default {
   computed: {
     ...mapGetters({ themeColor: 'trends/getTheme', total: 'trends/getTotals' })
   },
+
   mounted() {
     this.$colorMode.preference = this.themeColor
   },
   methods: {
-    ...mapActions({ theme: 'trends/fetchTheme' }),
+    ...mapActions({
+      theme: 'trends/fetchTheme'
+    }),
     themeMode(mode) {
       this.$colorMode.preference = mode
       this.theme(mode)

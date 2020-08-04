@@ -2,7 +2,10 @@
   <div
     class="text-gray-700 dark:text-gray-200 max-w-7xl rounded-md mt-1 lg:py-10 py-6 px-4 sm:px-8 lg:px-8 mx-auto"
   >
-    <div class="grid grid-cols-1 gap-0 lg:grid-cols-4 lg:gap-12">
+    <div v-if="$fetchState.pending">
+      We collecting data ....
+    </div>
+    <div v-else class="grid grid-cols-1 gap-0 lg:grid-cols-4 lg:gap-12">
       <div class="col-span-1 lg:col-span-2">
         <label for="search">
           <div class="font-medium text-base text-center text-gray-800">
@@ -62,9 +65,7 @@
         </div>
         <!-- maincards -->
         <transition name="component-fade" mode="out-in">
-          <keep-alive>
-            <component :is="activeComponent"></component>
-          </keep-alive>
+          <component :is="activeComponent"></component>
         </transition>
         <!-- end of cards -->
         <!-- Table Entry-->
@@ -288,15 +289,17 @@ export default {
     Recovered: () => import('@/components/graphs/recovered'),
     Critical: () => import('@/components/graphs/critical')
   },
-  async fetch({ store, from }) {
-    const intialPageLoad = !from
-    if (intialPageLoad) {
-      await Promise.all([
-        store.dispatch('regions/fetchRegions'),
-        store.dispatch('trends/fetchTrends'),
-        store.dispatch('summaries/fetchWorld')
-      ])
-    }
+  async fetch() {
+    const { store } = this.$nuxt.context
+    // const intialPageLoad = !from
+    // if (intialPageLoad) {
+    await Promise.all([
+      store.dispatch('regions/fetchRegions'),
+      store.dispatch('trends/fetchTrends'),
+      store.dispatch('summaries/fetchWorld'),
+      store.dispatch('timer/fetchTimer', this.$fetchState.timestamp)
+    ])
+    // }
   },
   data: () => ({
     event: null,
@@ -325,16 +328,21 @@ export default {
       return false
     }
   },
-  mounted() {
-    this.$echo.channel('daily').listen('.total.world', (e) => {
-      this.worldUpdate(e)
-      // eslint-disable-next-line
-      console.info(e)
-    })
-    this.$echo.channel('daily').listen('.corona.weekly', (e) => {
-      this.weeklyUpdate(e.data)
-    })
+  activated() {
+    if (this.$fetchState.timestamp <= Date.now() - 10000) {
+      this.$fetch()
+    }
   },
+  // mounted() {
+  //   this.$echo.channel('daily').listen('.total.world', (e) => {
+  //     this.worldUpdate(e)
+  //     // eslint-disable-next-line
+  //     console.info(e)
+  //   })
+  //   this.$echo.channel('daily').listen('.corona.weekly', (e) => {
+  //     this.weeklyUpdate(e.data)
+  //   })
+  // },
   methods: {
     ...mapActions({
       worldUpdate: 'summaries/updateWorld',

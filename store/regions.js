@@ -66,6 +66,6 @@ export const actions = {
   },
 
   updateRegions({ commit }, payload) {
-    commit('addRegion', payload.data[0])
+    commit('addRegion', payload)
   }
 }

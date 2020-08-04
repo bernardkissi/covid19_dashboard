@@ -1,9 +1,9 @@
 // plugins/vuex-persistedstate.js
-import createPersistedState from 'vuex-persistedstate'
+// import createPersistedState from 'vuex-persistedstate'
 
-export default ({ store, isHMR, isClient }) => {
-  if (isHMR) return
-  window.onNuxtReady((nuxt) => {
-    createPersistedState()(store)
-  })
-}
+// export default ({ store, isHMR, isClient }) => {
+//   if (isHMR) return
+//   window.onNuxtReady((nuxt) => {
+//     createPersistedState()(store)
+//   })
+// }

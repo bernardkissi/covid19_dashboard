@@ -68,18 +68,18 @@ export default {
     '@nuxtjs/laravel-echo'
   ],
 
-  echo: {
-    broadcaster: 'pusher',
-    key: process.env.PUSHER_APP_KEY,
-    cluster: process.env.PUSHER_APP_CLUSTER,
-    encrypted: true,
-    wsHost: process.env.WEBSOCKET_HOST,
-    wsPort: process.env.PUSHER_PORT,
-    wssPort: process.env.PUSHER_PORT,
-    disableStats: true,
-    forceTLS: true,
-    enabledTransports: ['ws', 'wss']
-  },
+  // echo: {
+  //   broadcaster: 'pusher',
+  //   key: process.env.PUSHER_APP_KEY,
+  //   cluster: process.env.PUSHER_APP_CLUSTER,
+  //   encrypted: true,
+  //   wsHost: process.env.WEBSOCKET_HOST,
+  //   wsPort: process.env.PUSHER_PORT,
+  //   wssPort: process.env.PUSHER_PORT,
+  //   disableStats: true,
+  //   forceTLS: true,
+  //   enabledTransports: ['ws', 'wss']
+  // },
 
   tailwindcss: {
     // add '~tailwind.config` alias
@@ -105,7 +105,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios', '@nuxtjs/dotenv'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/localtunnel'],
 
   /**
    * [server description]

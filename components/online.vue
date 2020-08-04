@@ -32,7 +32,7 @@
         </svg>
         <span class="text-sm text-gray-700 dark:text-gray-300 font-medium">
           Last updated
-          <timeago :datetime="getDate" :auto-update="10"></timeago>
+          <timeago :datetime="timer" :auto-update="10"></timeago>
         </span>
       </div>
     </div>
@@ -42,10 +42,7 @@
 import { mapGetters } from 'vuex'
 export default {
   computed: {
-    ...mapGetters({ summary: 'summaries/getWorld' }),
-    getDate() {
-      return this.summary.updated
-    }
+    ...mapGetters({ timer: 'timer/getTimer' })
   }
 }
 </script>
