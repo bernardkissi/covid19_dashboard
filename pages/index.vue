@@ -2,13 +2,15 @@
   <div
     class="text-gray-700 dark:text-gray-200 max-w-7xl rounded-md mt-1 lg:py-10 py-6 px-4 sm:px-8 lg:px-8 mx-auto"
   >
-    <div v-if="$fetchState.pending">
+    <div v-if="$fetchState.pending" class="text-center text-base">
       We collecting data ....
     </div>
     <div v-else class="grid grid-cols-1 gap-0 lg:grid-cols-4 lg:gap-12">
       <div class="col-span-1 lg:col-span-2">
         <label for="search">
-          <div class="font-medium text-base text-center text-gray-800">
+          <div
+            class="font-medium text-base text-center dark:text-gray-100 text-gray-800"
+          >
             Search Regions
           </div>
           <div class="relative">
