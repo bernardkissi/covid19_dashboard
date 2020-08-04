@@ -143,7 +143,9 @@
       >
         <div class="flex items-start justify-between">
           <div>
-            <div class="text-2xl font-semibold text-gray-800">
+            <div
+              class="text-2xl font-semibold dark:text-gray-100 text-gray-800"
+            >
               Regional Breakdown
             </div>
             <div class="mb-4 font-normal text-gray-700 dark:text-gray-400">
@@ -159,7 +161,7 @@
         <Map />
         <!-- end of regional map -->
         <!-- Spread trends weekly -->
-        <div class="mt-8 text-gray-800">
+        <div class="mt-8 text-gray-800 dark:text-gray-100">
           <div class="text-2xl font-semibold">
             Spread Trends
           </div>
@@ -221,7 +223,7 @@
         <!-- end of spread trends -->
         <!-- demographics -->
         <div class="mt-8 text-gray-800">
-          <div class="text-2xl font-semibold">
+          <div class="text-2xl dark:text-gray-100 font-semibold">
             General Information
           </div>
           <div class="mb-2 font-normal dark:text-gray-500 text-gray-700">
