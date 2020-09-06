@@ -1,7 +1,7 @@
 # ghcovid19_tracker
 
 > covid 19 data visualization platform to track cases in ghana
-
+![Covid19](https://s3.amazonaws.com/users.uploads/Screen+Shot+2020-09-06+at+10.40.00+PM.png)
 ## Build Setup
 
 ```bash
